@@ -1,0 +1,29 @@
+body {
+    margin: 10px;
+}
+
+#pre-ul {
+    margin-left: 30px;
+}
+
+.media {
+    text-align: center;
+}
+
+img {
+    margin: 10px;
+    border: 8px solid orangered;
+}
+
+th {
+    border: 1px solid red;
+    color: red;
+}
+
+#empty-td {
+    height: 20px;
+}
+
+td:not(#empty-td) {
+    border: 1px solid black;
+}
