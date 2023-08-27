@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+nav {
+    background-color: rgb(248, 249, 250);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+nav button, #search-button {
+    background-color: rgb(53, 121, 246);
+    color: white;
+    padding: 5px;
+    border: 0;
+    border-radius: 3px;
+
+}
+
+.search-bar {
+    display: inline-block;
+    width: 100vw;
+    text-align: center; 
+    margin: 20px;
+    background-image: url(https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg);
+    background-position:center center;
+    background-size:cover;
+    height: 300px;
+    margin: 0;
+    padding-top: 60px;
+    color: white;
+}
+
+.header, #email, #search-button {
+    display: inline-block
+
+}
+
+#search-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+input {
+    height: 20px;
+    width: 200px;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.cons p {
+    font-size: 0.7rem;
+    color: lightslategray;
+}
+
+i {
+    font-size: 40px;
+    color: rgb(53, 121, 246)
+}
+
+.cons {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(248, 249, 250);
+    height: 100vw;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.cons div {
+    display: inline-block;
+    width: 150px;
+    margin: 20px;
+    padding: 10px;
+}
+
