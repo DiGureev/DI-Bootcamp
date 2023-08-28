@@ -7,14 +7,16 @@
 body {
     position: relative;
     width: 100vw;
+    font-family: 'Roboto';
 }
+
+/* Nav part */
 
 nav {
     background-color: black;
     width: 100vw;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Roboto'
 }
 
 ul {
@@ -22,14 +24,13 @@ list-style: none;
 color: white;
 width: 100%;
 height: 64px;
-padding-top: 15px;
+padding-top: 20px;
 width: 100%;
 }
 
 li {
     float: left;
     text-transform: uppercase;
-    font-size: 1.8rem;
 }
 
 #op {
@@ -43,29 +44,86 @@ li > a {
     font-size: 1.2rem;
 }
 
+/* footer */
+
 footer {
     height: 200px;
     width: 100vw;
     background-color: black;
     color: white;
-    font-family: 'Roboto';
     padding: 50px;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
+/* shopping section */
 
 .shopping-list {
     width: 100vw;
+    text-align: center;
 }
 
 .card-holder {
     display: inline-block;
-    width: 150px;
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
 
+.img {
+    position: relative;
+}
 
+.dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 8px;
+}
+
+.green-dot {
+    background-color: green;
+    position: absolute;
+    top: 5px; left: 5px;
+}
+
+.red-dot {
+    background-color: brown;
+    position: absolute;
+    top: 5px; right: 5px;
 }
 
 .img > img {
     width: 100%;
+}
+
+.detail > p {
+    padding-top: 10px;
+    font-size: 0.8rem;
+}
+
+.price {
+    padding-bottom: 10px;
+    color: green;
+    font-weight: 600;
+}
+
+.price s {
+    font-size: 0.6rem;
+    color: black;
+    font-weight: 300;
+}
+
+.detail button {
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
 }
 
