@@ -81,3 +81,48 @@ footer a {
  footer a:hover {
     color: purple;
   }
+
+  @media only screen and (min-width: 600px) {
+    h1 {
+      font-size: 35px;
+    }
+
+    nav {
+      background-color: yellow;
+      color: black;
+    }
+
+    .nav-item {
+      color: black;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 25px;
+    }
+    nav {
+      background-color: lightgreen;
+    }
+  
+  }
+
+  @media only screen and (min-width: 992px) {
+    nav {
+      background-color: red;
+      color: white;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    
+    article > h1, p {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 0px;
+    }
+    article p {
+      margin-left: 20px;
+      vertical-align: baseline;
+   }
+  }
