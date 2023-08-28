@@ -1,0 +1,189 @@
+body {
+    width: 80vw;
+    text-align: center;
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+/* Base rules for divs */
+
+body > div {
+    display: inline;
+    position: relative;
+}
+
+#log-in, #register {
+    position: absolute;
+    width: 50vw;
+    padding-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+
+}
+
+#log-in {
+    left: 0;
+    background-color: whitesmoke;
+    height: 500px;
+}
+
+#register {
+    float: right;
+    right: 0;
+    background: linear-gradient(135deg, #411270 0%, #DC02FF 100%);    height: 500px;
+    color: white;
+}
+
+/* Log In form */
+
+h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+}
+
+#email, #password {
+    margin: 10px;
+    width: 80%;
+    height: 30px;
+    border: 0;
+    background-color: lightgrey;
+    color: #736e6e;
+}
+
+::placeholder {
+    padding-left: 10px;
+}
+
+/* Checkbox */
+
+#checkbox {
+    display: inline;
+    font-size: 1rem;
+    float: left;
+    margin: 20px 0px 20px 10px;
+    padding: 0;
+    width: 40%;
+}
+
+#forgot {
+    display: inline;
+    font-size: 1rem;
+    float: right;
+    padding: 0;
+    margin: 20px 20px 20px 0px;
+    width: 40%;
+}
+
+#forgot a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Log In button */
+
+#log-in-button {
+    background-color: #8809B2;
+    display: inline-block;
+    width: 80%;
+    padding: 8px 0px 8px 0px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0;
+}
+
+/* Section with lines */
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+#line {
+    position: relative;
+    overflow: hidden;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    width: 80%;
+    margin: auto;
+}
+  
+#line  > span {
+display: inline-block;
+margin: 20px;
+}
+
+#line  > span:before,
+#line  > span:after {
+content: '';
+position: absolute;
+width: 100%;
+border-top: 1px solid #4e4e4e;
+margin-top: .6em;
+color: #736e6e;
+}
+
+#line  > span:before {
+margin-left: -108%;
+color: #736e6e;
+}
+
+#line  > span:after {
+margin-left: 8%;
+color: #736e6e;
+}
+
+/* SM icons */
+
+ul {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+}
+
+/* Register div */
+
+#register i {
+    padding-top: 50px;
+    font-size: 5rem;
+}
+
+h2 {
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.content {
+    margin: 20px;
+}
+
+#register p {
+    font-size: 1.1rem;
+}
+
+/* Register button */
+
+#registration-button i {
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 10px;
+}
+  
+#registration-button {
+    background-color: rgb(28, 23, 23, 0);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0px 30px 0px 30px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
