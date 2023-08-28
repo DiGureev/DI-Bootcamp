@@ -60,6 +60,16 @@ footer {
     font-size: 2rem;
 }
 
+.shopping-list {
+    width: 100vw;
+}
 
+.card-holder {
+    width: 200px;
+}
+
+img {
+    width: 200px;
+}
 
 
