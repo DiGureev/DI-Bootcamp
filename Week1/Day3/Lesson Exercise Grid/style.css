@@ -1,0 +1,192 @@
+body {
+    background-color: lightgreen;
+}
+
+/* Ex-1 section */
+
+.ex-1 {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    height: 500px;
+    display: grid;
+    grid-template-areas: 
+    
+    "a b b b"
+    "d e e e"
+    "f g g g"
+    "c c c c";
+
+    gap: 15px;
+}
+
+#red-1 {
+    grid-area: a;
+    background-color: red;
+    border: 1px solid black;
+}
+
+#blue-1 {
+    grid-area: b;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+#red-2 {
+    grid-area: d;
+    background-color: red;
+    border: 1px solid black;
+}
+
+#blue-2 {
+    grid-area: e;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+#red-3 {
+    grid-area: f;
+    background-color: red;
+    border: 1px solid black;
+}
+
+#blue-3 {
+    grid-area: g;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+
+.yellow {
+    grid-area: c;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+/* Ex-2 section */
+
+.ex-2 {
+    background-color: white;
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    grid-template-areas: 
+    
+    "a a a a"
+    "b b c c"
+    "d d c c"
+    "d d e e"
+    "f f f g"
+    "h h h h";
+    gap: 5px;
+}
+
+header {
+    background-color: aqua;
+    grid-area: a;
+    height: 64px;
+}
+
+#hero {
+    background-color: lightpink;
+    grid-area: b;
+    height: 60px;
+
+}
+
+article {
+    background-color: yellow;
+    grid-area: c;
+    height: 100px;
+    
+}
+
+aside {
+    background-color: green;
+    grid-area: d;
+    height: 60px;
+}
+
+#extra {
+    background-color: grey;
+    grid-area: e;
+    
+}
+
+#images {
+    background-color: greenyellow;
+    grid-area: f;
+    height: 50px;
+    
+}
+
+#posts {
+    background-color: lightsalmon;
+    grid-area: g;
+    
+}
+
+footer {
+    background-color: orange;
+    grid-area: h;
+    height: 30px;
+}
+
+/* Ex-3 */
+
+.ex-3 {
+    background-color: white;
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    grid-template-areas: 
+    
+    "one one one"
+    "two three four"
+    "two five five"
+    "six six seven"
+    "eight eight eight";
+    gap: 5px;
+}
+
+
+
+#one {
+    grid-area: one;
+    background-color: purple;
+}
+
+#two {
+    grid-area: two;
+    background-color: lightskyblue;
+}
+
+#three {
+    grid-area: three;
+    background-color: chartreuse;
+}
+
+#four {
+    grid-area: four;
+    background-color: lightcoral;
+}
+
+#five {
+    grid-area: five;
+    background-color: lightgreen;
+}
+
+#six {
+    grid-area: six;
+    background-color: purple;
+}
+
+#seven {
+    grid-area: seven;
+    background-color: lightskyblue;
+}
+
+#eight {
+    grid-area: eight;
+    background-color: chartreuse;
+}
