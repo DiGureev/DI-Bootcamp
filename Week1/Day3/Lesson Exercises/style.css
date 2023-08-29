@@ -1,0 +1,102 @@
+body {
+    background-color: lightgreen;
+}
+
+.flex-container {
+ background-color: white;
+ padding: 20px;
+ height: 200px;
+ display: flex;
+ flex-direction: column;
+ flex-basis: 30px;
+ justify-content: space-between;
+}
+
+.flex-item {
+    background-color: lightblue;
+    text-align: center;
+    height: 30px;
+}
+
+#flex-2 {
+    flex-basis: 60px;
+    width: 50%;
+    align-self: center;
+}
+
+/* Ex2 */
+
+.ex-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    height: 100px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.item-ex2 {
+    background-color: lightblue;
+    flex-basis: 30px;
+}
+
+#ex2-flex2 {
+    width: 20%;
+    align-self: flex-end;
+}
+
+/* Ex 3 */
+.ex-3 {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    height: 100px;
+    text-align: center;
+}
+
+.item-ex3 {
+    background-color: palevioletred;
+    margin: 1px;
+    flex-basis: 30px;
+    height: 20px;
+    flex-grow: 1;
+    color: white;
+}
+
+#ex3-flex2 {
+    flex-grow: 2;
+    background-color: aqua;
+}
+
+
+#ex3-flex3 {
+    flex-grow: 2;
+    background-color: brown;
+}
+
+/* Ex 4 */
+
+.ex-4 {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    height: 100px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.item-ex4 {
+    background-color: lightblue;
+    margin: 1px;
+    flex-basis: 30px;
+    height: 20px;
+}
+
+#ex4-flex1, #ex4-flex3 {
+    width: 60%;
+    align-self: center;
+}
