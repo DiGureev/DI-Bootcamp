@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.wrapper-container {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+.wrapper-container div {
+    width: 60px;
+    height: 60px;
+}
+
+.box-orange {
+    background-color: orange;
+}
+
+.box-cream {
+    background-color: lightsalmon;
+}
+
+.box-brown {
+    background-color: brown;
+}
