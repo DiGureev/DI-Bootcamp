@@ -1,105 +1,121 @@
 body {
+    padding 0;
     margin: 0;
-    padding: 0;
-    display: grid;
-    font-family: 'Heebo', sans-serif;
-    width: 80vw;
-    margin: auto;
-    padding: 20px;
-    grid-template-areas: 
-    
-    "a b b"
-    
-    ;
-}
-
-aside {
-    grid-area: a;
+    background-color: rgb(249, 246, 241);
+    font-family: 'Heebo';
+    text-transform: uppercase;
+    color: white;
+    background: url(city-backgroung.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    padding: 20px;
-    background-color:blanchedalmond;
 }
 
 section {
-    grid-area: b;
-    text-align: left;
-    padding: 20px;
-    background-color: rgb(255, 248, 238);
+    display: block;
 }
 
-span {
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin-top: 50px;
+.header {
+    background-color: rgb(62, 87, 78);
+    padding: 10px;
+    text-align: center;
 }
 
-img {
-    width:100%;
-    height:100%;
-    object-fit: cover;
+.space {
+    display: block;
+    height: 20px;
+    background-color: aliceblue;
+}
+
+.header p, button {
+    display: inline;
+    font-size: 0.7rem;
+    font-weight: 700;
+
+}
+
+#learn-button {
+    padding: 10px 15px;
+    background-color: rgb(22, 163, 228);
+    border: 0px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.download {
+    padding: 50px;
+    color: rgb(62, 87, 78);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
+ font-size: 2rem;
+}
+
+.form-div {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.form-div label {
+    padding-top: 20px;
+}
+
+.select {
+    text-align: left;
+    font-size: 0.6rem;
+    font-weight: 700;
+   
+}
+
+input {
+    border: 0px;
+    margin-top: 5px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+select {
+    display: inline-block;
+    width: 300px;
+    border: 0px;
+    margin-top: 5px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-top: 10px;
+
+}
+
+#checkbox {
+    margin: 0;
+    padding: 0;
+}
+
+.checkbox label {
+    font-size: 0.6rem;
+}
+
+#download-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(22, 163, 228);
+    color: white;
     text-transform: uppercase;
-    font-size: 1.5;
-    margin-bottom: 0;
-}
-
-#role {
-    margin: 5px;
-    color: gray;
-}
-
-.social-buttons {
-    display: inline;
-    list-style: none;
-}
-
-.social-buttons > li {
-    font-size: 3rem;
-    color: grey;
-}
-
-#about {
-    margin-top: 50px;
-}
-
-h2 {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 1rem;
-}
-
-section p, li {
-    font-size: 0.9rem;
-}
-
-h3 {
-    font-size: 0.9rem;
-}
-
-.date {
-    color: gray;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-style: italic;
-}
-
-.skills {
-    columns: 50px 2;
-    column-gap: 40px;
-}
-
-#description {
-display: inline;
-list-style:inside;
-margin-top: 0;
-}
-
-#description li {
-    margin-bottom: 10px;
-
 }
