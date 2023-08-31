@@ -10,17 +10,23 @@ body {
 
 nav {
     height: 64px;
+    width: 100vw;
     background-color: #1E1E1E;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    position: fixed;
+    z-index: 1;
 
+}
+
+.main-container {
 }
 
 
 ul {
     list-style: none;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 li {
@@ -29,6 +35,7 @@ li {
     align-items: center;
     margin-left: 20px;
     font-size: 1.3em;
+    font-weight: 500;
 }
 
 a {
@@ -52,20 +59,65 @@ a:hover {
 }
 
 .cover {
+    display: block;
     text-align: center;
     padding: 20px;
     width: 80%;
     margin: auto;
+    position: relative;
+    padding-bottom: 30px;
+    height: 100vh;
 }
+
+#circle {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #2FEA00;
+    border-radius: 50%;
+    margin: 20px;
+    z-index: -8;
+
+
+}
+
+#squere {
+    height: 100px;
+    width: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: 5px;
+    transform: rotate(40deg);
+    background-color: yellow;
+    z-index: -8;
+
+}
+
+#little-squere {
+    height: 50px;
+    width: 50px;
+    background-color: #8809B2;
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    transform: rotate(10deg);
+    z-index: -8;
+}
+
+
 h1 {
     text-transform: uppercase;
     font-size: 6em;
     letter-spacing: 10px;
     margin-bottom: 0;
+    margin-top: 80px;
+    line-height: 01;
 }
 
 .subtitle {
-    margin-top: 0;
+    margin-top: 20px;
     font-size: 1.1em;
     font-style: italic;
 }
@@ -74,6 +126,7 @@ h1 {
     text-align: left;
     margin: auto;
     width: 70%;
+    margin-top: 50px;
     
 }
 
@@ -83,95 +136,128 @@ button {
     padding: 10px 20px;  
     border: 0;
     border-radius: 5px; 
-    font-size: 1em; 
+    font-size: 1.2em; 
+    font-weight: 500;
     margin: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+
 
 }
 
 button:hover {
-    border: 2px solid #2FEA00;
+    border: 2px solid #1E1E1E;
 
-}
-
-.back {
-    background-color: #1E1E1E;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .projects {
     display: grid;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 280px;
-    grid-template-columns: repeat(11,1fr) minmax(auto-fill,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 10px 10px;
-    grid-template-areas: 
-    
-    "a a a b b c c d d e e"
-    "a a a f f c c d d e e"
-    "g g g f f h h h h e e"
-    
-    ;
-
+    grid-template-columns: repeat(auto-fill, minmax (150px,1fr));
     width: 80%;
     margin: auto;
-    
 }
 
 .projects div {
+    height: 20vh;
     background-color: #2FEA00;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    font-size: 1em;
 }
 
-#first-project {
-  
-    grid-area: a;
+.skills {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+    margin: auto;
 }
 
-#hackaton {
-   
-    grid-area: b;
+.wraper {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-#smth1 {
-    
-    grid-area: c;
+*:before, *:after, * {
+    box-sizing: inherit;
+
 }
 
-#smth2 {
-   
-    grid-area: d;
-    margin:auto;
-    width: 0;
-    height: 0;
-    background-color: none;
-    background-color: rgb(255,255,255,0);
-    border-top: 0px solid transparent;
-    border-bottom: 200px solid #2FEA00;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
+
+.wrap-hard, .wrap-soft {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+
 }
 
-#smth3 {
-    
-    grid-area: e;
+.wrap-hard div, .wrap-soft div {
+
+    border: 1px solid #e0dcdc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 1.5em;
+    font-weight: 500;
+
 }
 
-#smth4 {
-   
-    grid-area: f;
-    border-radius: 50%;
+#block-3, #block-6, #block-8, #block-10, #block-13, #block-14 {
+    color: white;
 }
 
-#smth5 {
+#block-3, #block-10 {
+    background-color: #2FEA00;
 
-    grid-area: g;
 }
 
-#smth6 {
-    
-    grid-area: h;
+#block-6, #block-13 {
+    background-color: #8809B2;
+
 }
+
+#block-8, #block-14 {
+    background-color: #1E1E1E;
+
+}
+
+.skills p {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    color: #e0dcdc;
+    letter-spacing: 8px;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    li {
+        font-size: 0.8em;
+    }
+
+    .text {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    button {
+        margin-top: 0;
+        font-size: 0.7em;
+        display: block;
+        width: 60%;
+        margin: auto;
+        margin-top: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
