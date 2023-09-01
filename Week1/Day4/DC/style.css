@@ -1,0 +1,19 @@
+body {
+    padding: 10px
+}
+
+#sidebar {
+    background-color: lightgray;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5)
+}
+
+figure { 
+    border-left: 4px solid rgb(229, 227, 227);
+    padding-left: 10px;
+}
+
+img {
+    width: 100%;
+}
