@@ -1,12 +1,20 @@
-body {
+* {
     box-sizing: border-box;
     margin: auto 0;
     padding: 0;
+}
+
+
+body {
+    
     font-family: 'Heebo';
     width: 100vw;
     background-color: #FFFEFC;
     color: #1E1E1E;
+    position: relative;
 }
+
+/* Navigation */
 
 nav {
     height: 64px;
@@ -19,10 +27,6 @@ nav {
     z-index: 1;
 
 }
-
-.main-container {
-}
-
 
 ul {
     list-style: none;
@@ -58,6 +62,8 @@ a:hover {
     width: 100%;
 }
 
+/* Main section */
+
 .cover {
     display: block;
     text-align: center;
@@ -65,8 +71,7 @@ a:hover {
     width: 80%;
     margin: auto;
     position: relative;
-    padding-bottom: 30px;
-    height: 100vh;
+    padding-bottom: 60px;
 }
 
 #circle {
@@ -79,11 +84,9 @@ a:hover {
     border-radius: 50%;
     margin: 20px;
     z-index: -8;
-
-
 }
 
-#squere {
+#line {
     height: 100px;
     width: 10px;
     position: absolute;
@@ -92,7 +95,6 @@ a:hover {
     transform: rotate(40deg);
     background-color: yellow;
     z-index: -8;
-
 }
 
 #little-squere {
@@ -106,6 +108,7 @@ a:hover {
     z-index: -8;
 }
 
+/* About myself */
 
 h1 {
     text-transform: uppercase;
@@ -130,44 +133,63 @@ h1 {
     
 }
 
-button {
+/* Buttons */
+
+
+.main-buttons {
     background-color: #8809B2;
     color: white;
     padding: 10px 20px;  
     border: 0;
     border-radius: 5px; 
     font-size: 1.2em; 
-    font-weight: 500;
+    font-weight: 700;
     margin: 10px;
     margin-top: 30px;
     text-transform: uppercase;
-
-
+    position: relative;
+    transition: 1s;
+    overflow: hidden;
 }
 
-button:hover {
-    border: 2px solid #1E1E1E;
-
+button:hover,
+button:focus {
+    filter: brightness(1.50);
+    cursor: pointer;
+    outline: none;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax (150px,1fr));
-    width: 80%;
-    margin: auto;
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 60px;
+    height: 100%;
+    background-color: white;
+    filter: blur(40px);
+    transform: skewX(-30deg);
 }
 
-.projects div {
-    height: 20vh;
-    background-color: #2FEA00;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
-    font-size: 1em;
+button:hover:before,
+button:focus:before {
+    left: calc(100% + 150px);
+    transition: 1s;
 }
+
+button:hover:after,
+button:focus:after {
+    left: calc(100% + 150px);
+    transition: 1s 0.5s;
+}
+
+/* Skills section */
+
+#skills-button {
+    display: none;
+}
+
 
 .skills {
     padding-left: 20px;
@@ -186,17 +208,15 @@ button:hover {
 
 }
 
-
 .wrap-hard, .wrap-soft {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 20px;
 
 }
 
 .wrap-hard div, .wrap-soft div {
-
     border: 1px solid #e0dcdc;
     border-radius: 5px;
     padding: 5px 10px;
@@ -204,7 +224,6 @@ button:hover {
     margin-top: 5px;
     font-size: 1.5em;
     font-weight: 500;
-
 }
 
 #block-3, #block-6, #block-8, #block-10, #block-13, #block-14 {
@@ -232,7 +251,84 @@ button:hover {
     font-weight: 700;
     color: #e0dcdc;
     letter-spacing: 8px;
-    margin: 0;
+}
+
+/* Projects section */
+
+.projects-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; 
+    column-gap: 30px;
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.projects-box div {
+    background-color: #1E1E1E;
+    max-width: 600px;
+    height: auto;
+    margin: 0px;
+    color: white;
+    border-radius: 20px;
+}
+
+.project-info {
+    padding: 20px ;  
+}
+
+.card-buttons {
+    background-color: #8809B2;
+    color: white;
+    padding: 10px 20px;  
+    border: 0;
+    border-radius: 5px; 
+    font-size: 0.8em; 
+    font-weight: 700;
+    margin-right: 10px;
+    margin-top: 30px;
+    position: relative;
+    transition: 1s;
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.sub-card {
+    font-size: 1em;
+    
+}
+
+.cover-img {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+
+.cover-img img {
+    width: 100%;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+
+
+}
+
+/* Footer */
+
+footer {
+    background-color: #1E1E1E;
+    width: 100%;
+    color: #2FEA00;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    padding-left: 50px;
+    font-size: 1em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -249,15 +345,94 @@ button:hover {
         font-size: 0.8em;
     }
 
-    button {
+    .main-buttons {
         margin-top: 0;
         font-size: 0.7em;
         display: block;
         width: 60%;
         margin: auto;
         margin-top: 20px;
-        font-weight: 700;
         text-transform: uppercase;
+    }
+
+    #skills-button {
+        display: block;
+    }
+
+    .projects-box {
+        grid-template-columns: 1fr;        
+    }
+
+    .projects-box div {
+        margin-bottom: 20px;
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .sub-card {
+        font-size: 0.8em;
+        padding-top: 5px;
+    }
+
+    .card-buttons {
+        font-size: 0.8em; 
+        font-weight: 700;
+        }
+}
+
+@media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 9em;
+       margin-top: 200px;
+    }
+
+    .text {
+        font-size: 2em;
+    }
+
+    .main-buttons {
+        font-size: 2em;
+        padding: 20px 50px;
+    }
+
+
+    .skills {
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+    }
+   
+
+    .skills p {
+        align-self: center;
+        font-size: 7em;
+    }
+
+    .wrap-hard, .wrap-soft {
+        align-content: center;
+    }
+
+    li {
+        font-size: 2em;
+        
+    }
+
+    .card-buttons {
+        margin-top: 30px;
+        font-size: 1.5em;
+    }
+
+    footer {
+    font-size: 1.4em;
     }
 }
 
