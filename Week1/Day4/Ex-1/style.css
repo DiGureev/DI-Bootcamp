@@ -1,0 +1,69 @@
+nav {
+    padding: 0 !important;
+}
+
+.nav-item, .navbar-brand {
+    display: block;
+
+}
+
+a {
+    color: grey !important;
+}
+
+a:hover {
+    color: white !important;
+}
+
+
+.navbar-brand {
+    margin: 0 !important;
+    padding: 10px 20px !important;
+}
+
+.nav-item, form, .navbar-toggler {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+form {
+    padding-right: 20px;
+}
+
+.nav-item:hover, .navbar-brand:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s
+}
+
+#button {
+    color: white !important;
+}
+
+.main-section {
+}
+
+h1 {
+    font-weight: 400 !important;
+}
+
+.header {
+    font-size: 1.5em;
+    padding-left: 5px;
+}
+
+h3 .badge {
+    background-color:aqua;
+}
+
+.columns-section {
+    margin: 50px;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.col-sm {
+    margin-bottom: 20px;
+}
