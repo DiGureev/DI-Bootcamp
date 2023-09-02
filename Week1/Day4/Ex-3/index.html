@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-3 Bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/449e4dee85.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--  Navbar -->
+    <div class="main" >
+        <nav class="d-flex justify-content-between align-content-end navbar navbar-expand-lg navbar-light">
+            <div class="Logo">
+              <a class="navbar-brand" href="#"><b>INTENSE<span class="green-logo">job search</span></b></a>
+            </div>
+            <div class="elements">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#">Find a job</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Post a job</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pages</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="register align-content-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                  <p class="nav-link" aria-current="page">or</p>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Register</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header-section">
+            <h1 class="text-capitalize">Build your future</h1>
+            <p>We offer <span class="green-logo">2,989</span> job vacancies right now!</p>
+            <form class="d-flex">
+            <input type="search" class="form-control" id="search" placeholder="Job title, skills or company"   aria-describedby="search">
+            <div class="dr">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" id="drop"   aria-expanded="false">City or State</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">1</a></li>
+                <li><a class="dropdown-item" href="#">2</a></li>
+                <li><a class="dropdown-item" href="#">3</a></li>
+                <li><a class="dropdown-item" href="#">4</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-success"><b>FIND JOB</b></button>   
+          </form>        
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="container m-0 p-0">
+        <div class="row">
+          <div class="cat-item col-md-2">
+          <i class="fa-solid fa-house-medical"></i>
+          <p>HealthCare</p>
+          <p>—</p>
+          </div>
+          <div class="cat-item col-md-2">
+            <i class="fa-solid fa-car"></i>
+          <p>Automobile jobs</p>
+          <p>—</p>
+          </div>
+          <div class="cat-item col-md-2">
+            <i class="fa-solid fa-building"></i>
+            <p>Construction</p>
+            <p>—</p>
+          </div>
+          <div class="cat-item col-md-2">
+            <i class="fa-solid fa-utensils"></i>
+            <p>Food Service</p>
+            <p>—</p>
+          </div>
+          <div class="cat-item col-md-2">
+            <i class="fa-solid fa-globe"></i>
+          <p>Logistics</p>
+          <p>—</p>
+          </div>
+          <div class="cat-item col-md-2">
+            <i class="fa-solid fa-money-bill"></i>
+            <p>Finance</p>
+            <p>—</p>
+          </div>
+        </div>
+        <!-- New row with table -->
+          <div class="row">
+            <!-- first empty column -->
+            <div class="col-3"></div>
+            <!-- Second column with content-->
+
+            <div class="col-6" id="table">
+              <h2>Latest job</h2>
+              <p>—</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Job vacancy</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Employment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><i class="fa-solid fa-circle-dot"></i></th>
+                    <td>11.11.2023</td>
+                    <td><i class="fa-regular fa-building"></i></td>
+                    <td>Manager</td>
+                    <td>New-York</td>
+                    <td>$6000</td>
+                    <td>Full time</td>
+                  </tr>
+                  <tr>
+                    <th><i class="fa-solid fa-circle-dot"></i></th>
+                    <td>11.11.2023</td>
+                    <td><i class="fa-regular fa-building"></i></td>
+                    <td>Manager</td>
+                    <td>New-York</td>
+                    <td>$6000</td>
+                    <td>Full time</td>
+                  </tr>
+                  <tr>
+                    <th><i class="fa-solid fa-circle-dot"></i></th>
+                    <td>11.11.2023</td>
+                    <td><i class="fa-regular fa-building"></i></td>
+                    <td>Manager</td>
+                    <td>New-York</td>
+                    <td>$6000</td>
+                    <td>Full time</td>
+                  </tr>
+                  <tr>
+                    <th><i class="fa-solid fa-circle-dot"></i></th>
+                    <td>11.11.2023</td>
+                    <td><i class="fa-regular fa-building"></i></td>
+                    <td>Manager</td>
+                    <td>New-York</td>
+                    <td>$6000</td>
+                    <td>Full time</td>
+                  </tr>
+                  <tr>
+                    <th><i class="fa-solid fa-circle-dot"></i></th>
+                    <td>11.11.2023</td>
+                    <td><i class="fa-regular fa-building"></i></td>
+                    <td>Manager</td>
+                    <td>New-York</td>
+                    <td>$6000</td>
+                    <td>Full time</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- Third empty column -->
+              <div class="col-3"></div>
+              <button type="button" class="btn btn-success"><b>VIEW ALL</b></button>   
+            </div> 
+          </div>
+          <!-- Last three columns -->
+          <div class="row bg-light " id="choose">
+            <div class="col-12">
+              <h2 class="text-capitalize text-center">Why people choose us</h2>
+              <p class="text-center">—</p>
+            </div>
+          <div class="row bg-light" id="choose-cols">
+            <div class="col-3"></div>
+            <div class="col-2">
+              <div class="columns-icons">
+              <i class="fa-solid fa-certificate"></i>
+              <p class="subheader text-uppercase">Verified Employee</p>
+              </div>
+              <p>Something else very important for this section</p>
+            </div>
+            <div class="col-2">
+              <div class="columns-icons">
+                <i class="fa-solid fa-chart-simple"></i>
+                <p class="subheader text-uppercase ">Demended Vacancies</p>
+                </div>
+                <p>Something else very important for this section</p>
+            </div>
+            <div class="col-2">
+              <div class="columns-icons">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="subheader text-uppercase">Employment blog</p>
+                </div>
+                <p>Something else very important for this section</p>
+            </div>
+            <div class="col-3"></div>
+          </div>
+
+        </div>
+    
+
+
+
+     
+    
+
+
+
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </body>
+</html>
