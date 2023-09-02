@@ -139,11 +139,20 @@ i {
     color: rgb(91, 139, 18);
 }
 
+h2 {
+    padding-top: 20px;
+}
 
 .subheader {
     font-weight: 700;
 }
 
-#choose-cols {
-    margin: 0;
+
+
+@media only screen and (min-width: 600px) {
+    .container {
+        max-width: 100vw !important;
+
+    }
+
 }
