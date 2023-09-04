@@ -231,14 +231,17 @@
 #     sandwich_orders.remove("Pastrami sandwich")
 # print(sandwich_orders)
 
+# sandwich_orders_items = sandwich_orders[:]
+# print(sandwich_orders_items)
+
 # finished_sandwiches = []    
 
-# for orders in sandwich_orders:
+# for orders in sandwich_orders_items:
 
-#     #❓When I remove item from the sandwich_orders on this step, using remove or pop (sandwich_orders.remove(orders) or sandwich_orders.pop(0)), 
-#     #loop doesn't see Avocado and Chiken, i dont know why. Couldn't find a solution :(
-    
-#     finished_sandwiches.append(orders)
-#     print(f'I finished your {orders}')
+# #     #❓When I remove item directly from the "sandwich_orders" without making a copy in "sandwich_orders_items", 
+# #     #loop doesn't see Avocado and Chiken, i dont know why. Couldn't find a better solution :(
 
-# sandwich_orders.clear()
+#       sandwich_orders.remove(orders)
+#       finished_sandwiches.append(orders)
+#       print(f'I finished your {orders}')
+# print(sandwich_orders)

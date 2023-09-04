@@ -1,57 +1,41 @@
-# Using the input function, ask the user for a string. The string must be 10 characters long.
-# If it’s less than 10 characters, print a message which states “string not long enough”.
-# If it’s more than 10 characters, print a message which states “string too long”.
-# If it’s 10 characters, print a message which states “perfect string” and continue the exercise.
-# Then, print the first and last characters of the given text.
+# Challenge 1
+# Ask the user for a number and a length.
+# Create a program that prints a list of multiples of the number until the list length reaches length.
+# Examples
+# number: 7 - length 5 ➞ [7, 14, 21, 28, 35]
+# number: 12 - length 10 ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+# number: 17 - length 6 ➞ [17, 34, 51, 68, 85, 102]
 
-# user_choice = input("Give me a string which is 10 characters long\n")
+#ANSWER
 
-# if len(user_choice) < 10 :
-#     print("string not long enough")
-# elif len(user_choice) == 10 :
-#     print("perfect string")
-    
-# else:
-#     print("string too long")
+# my_list = []
 
-# print(user_choice[0], user_choice[-1])
+# user_number = int(input('Give me the number: '))
+# user_length = int(input('Give me the length: '))
 
-# Using a for loop, construct the string character by character: Print the first character, then the second, then the third, until the full string is printed. For example:
-# The user enters "HelloWorld"
-# Then, you have to construct the string character by character
-# H
-# He
-# Hel
-# ... etc
-# HelloWorld
+# cur_number = 0
+# while user_length > 0:
+#     user_length -= 1
+#     cur_number += user_number 
+#     my_list.append(cur_number)
+# print(my_list)
 
+# Challenge 2
+# Write a program that asks a string to the user, and display a new string with any duplicate consecutive letters removed.
+# Examples
+# user's word : "ppoeemm" ➞ "poem"
+# user's word : "wiiiinnnnd" ➞ "wind"
+# user's word : "ttiiitllleeee" ➞ "title"
+# user's word : "cccccaaarrrbbonnnnn" ➞ "carbon"
 
-# for x in range(len('helloWorld')):
-#     print('helloWorld'[0:x+1])
+#ANSWER
 
-
-# 4. Bonus: Swap some characters around then print the newly jumbled string (hint: look into the shuffle method). For example:
-
-# Hlrolelwod
-
-# import random
-# a = list("HelloWorld")
-# random.shuffle(a)
-# print(''.join(a))
-
-
-list = ["Apple", "APPLE", "Pine", "PINE"]
-list2 = []
-
-# for list_up in list:
-#     if list_up.isupper():
-#         list2.insert(0,list_up)
-# print(list2)
+# user_answer = input('Give me a string with duplicate letters in it: ')
+# answer = []
+# answer.append(user_answer[0])
+# for index in range(len(user_answer))[1:]:
+#     if user_answer[index] != user_answer[index - 1]:
+#        answer.append(user_answer[index])
+# print(''.join(answer))
 
 
-# "Hello".upper == "HELLO"
-
-for list_up in list:
-    if list_up == list_up.upper():
-        list2.insert(0,list_up)
-print(list2)
