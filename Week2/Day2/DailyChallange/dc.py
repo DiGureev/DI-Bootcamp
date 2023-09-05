@@ -31,11 +31,9 @@
 #ANSWER
 
 # user_answer = input('Give me a string with duplicate letters in it: ')
-# answer = []
-# answer.append(user_answer[0])
-# for index in range(len(user_answer))[1:]:
-#     if user_answer[index] != user_answer[index - 1]:
-#        answer.append(user_answer[index])
-# print(''.join(answer))
-
+# answer = user_answer[0]
+# for index in range(1, len(user_answer)):
+#     if user_answer[index] != answer[-1]:
+#        answer += user_answer[index]
+# print(answer)
 
