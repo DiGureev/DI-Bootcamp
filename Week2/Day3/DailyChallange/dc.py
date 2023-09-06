@@ -72,20 +72,22 @@
 
 #ANSWER
 
-# items_dict = {
-#   "Phone": "$999",
-#   "Speakers": "$300",
-#   "Laptop": "$5000",
-#   "Tablet": "$1200"
-# }
+items_dict = {
+  "Phone": "$999",
+  "Speakers": "$300",
+  "Laptop": "$5000",
+  "Tablet": "$1200"
+}
 
-# wallet = "$1500" 
-# my_item_list = []
+wallet = "$1500" 
+my_item_list = []
 
-# for key, value in items_dict.items():
-#     value = value.replace("$", " ")
-#     wallet = wallet.replace("$", " ")
-#     if int(value) <= int(wallet):
-#         my_item_list.append(key)
-    
-# print(f" I've already bought {my_item_list}, I can't afford anithing else")
+convert_wallet = int(wallet.replace("$", " "))
+
+for key, value in items_dict.items():
+    value = int(value.replace("$", " "))
+    if value <= convert_wallet:
+        my_item_list.append(key)
+        convert_wallet -= value
+        
+print(f" I've already bought {my_item_list}, I can't afford anithing else, I have {convert_wallet} dollars left")
