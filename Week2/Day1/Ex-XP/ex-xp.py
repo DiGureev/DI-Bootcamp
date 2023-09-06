@@ -110,7 +110,7 @@
 
 #ANSWER
 
-# user_choice = int(input("What is your height in inches?\n"))
+# user_choice = float(input("What is your height in inches usind period '.'?\n"))
 
 # if user_choice * 2.54 > 145:
 #     print("You are tall enough to ride!")

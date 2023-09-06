@@ -11,7 +11,7 @@
 # my_fav_numbers = {"1", "2", "3"}
 # my_fav_numbers.update(["4", "5"])
 # my_fav_numbers = list(my_fav_numbers) 
-# my_fav_numbers.pop(-1)
+# my_fav_numbers.pop()
 # my_fav_numbers = set(my_fav_numbers) 
 
 # friend_fav_numbers = {"6", "7", "8"}
@@ -67,8 +67,9 @@
 # my_list = []
 # cur_number = 0
 # for number in range(10):
-#     cur_number += .5
 #     my_list.append(cur_number)
+#     cur_number += .5
+    
 # print(my_list)
 
 
@@ -77,15 +78,12 @@
 # Use a for loop to print all numbers from 1 to 20, inclusive.
 # Using a for loop, that loops from 1 to 20(inclusive), print out every element which has an even index.
 
-# ❓even index not an even number, right?
-
 # my_list = []
 
-# for number in range(1,21):
-#         my_list.append(number)
-# print(my_list)
-# even = my_list[1::2]
-# print(even)
+# numbers = list(range(1,22)) 
+# for each_num in numbers:
+#     if numbers.index(each_num) % 2 == 0:
+#         print(each_num)  
 
 # 🌟 Exercise 6 : While Loop
 # Instructions
@@ -98,7 +96,7 @@
 # while active:
 #     name = input("Please enter the name: ")
 #     if name == "Diana":
-#         active = False
+#         break
 #     else:
 #         print("I don't like it, try another name, let's say, 'Diana'")
 # print("Such a beautiful name!")
@@ -115,9 +113,7 @@
 
 #ANSWER
 
-# user_fruit = input('Give me a list of your favorit fruits. Please, separate each fruit with a space, eg. "apple mango cherry": ')
-# basket = user_fruit.split()
-
+# user_fruit = input('Give me a list of your favorit fruits. Please, separate each fruit with a space, eg. "apple mango cherry": ').split()
 # user_choice = input('Give me one fruit you like\n')
 
 # if user_choice in basket: 
