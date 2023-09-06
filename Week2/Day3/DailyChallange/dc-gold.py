@@ -18,30 +18,20 @@
 #     cypher_text += chr(ord(letter) + 3)
 
 
+# user_input = input('Do you want to encrypt or decrypt? If encrypt, press 1, if decrypt, press 2: ')
+# alphabet = 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
+
+# crypt_text = []
+
+# if user_input == 1:
+#     user_text = list[input('Give me the text to encrypt\n')]
+#     user_choice = int(input('give me the number to encrypt'))
+#     for a in user_text:
+#         b = int(user_text[a]) - user_choice
+#         c = alphabet[b]
+#         crypt_text.append(c)
+#     print(''.join(crypt_text))
+# else:
+#     pass
 
 
-
-
-
-def get_car_price(ages):
-    if ages > 40:
-        return 200
-    else:
-        return 300
-
-
-def get_flight_price(destination):
-    if destination == 'Paris':
-        return 400
-    else:
-        return 600
-    
-def inform():
-    age = int(input('How old are you?'))
-    dest = input('Where are you going?')
-    price_car = get_car_price(age)
-    flight_price = get_flight_price(dest)
-    total = price_car + flight_price
-    print(total)
-
-inform()
