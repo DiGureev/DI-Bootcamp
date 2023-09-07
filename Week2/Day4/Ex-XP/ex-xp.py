@@ -289,23 +289,25 @@
 # Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
 # If he had more then 3 wrong answers, ask him to play again.
 
-# wrong_answers = []
+wrong_answers = []
 
-# def quiz():
-#     win = 0
-#     lost = 0
-#     for index,dict in enumerate(data):
-#         user_input = input(data[index]["question"])
-#         if user_input == data[index]["answer"]:
-#             win += 1
+def quiz():
+    win = 0
+    lost = 0
+    for index,dict in enumerate(data):
+        user_input = input(data[index]["question"])
+        if user_input == data[index]["answer"]:
+            win += 1
             
-#         else:
-#             lost += 1
-#             wrong_answers.append(data[index]["question"])
-#             wrong_answers.append(data[index]["answer"])
-#             wrong_answers.append(user_input)
+        else:
+            lost += 1
+            wrong_answers.append(data[index]["question"])
+            wrong_answers.append(data[index]["answer"])
+            wrong_answers.append(user_input)
             
             
-#     print(f'Correct answers {win}, incorrect ancwers {lost}. Here are questions with right answers and your answers next to each other: {wrong_answers}')
+    print(f'Correct answers {win}, incorrect ancwers {lost}. Here are questions with right answers and your answers next to each other: {wrong_answers}')
+
+def inform_user():
 
 # quiz()

@@ -1,111 +1,81 @@
-# Exercise 1: Birthday Look-Up
+# Exercise 1 : When Will I Retire ?
 # Instructions
-# Create a variable called birthdays. Its value should be a dictionary.
-# Initialize this variable with birthdays of 5 people of your choice. For each entry in the dictionary, the key should be the person’s name, and the value should be their birthday. Tip : Use the format “YYYY/MM/DD”.
-# Print a welcome message for the user. Then tell them: “You can look up the birthdays of the people in the list!”“
-# Ask the user to give you a person’s name and store the answer in a variable.
-# Get the birthday of the name provided by the user.
-# Print out the birthday with a nicely-formatted message.
+# The point of the exercise is to check if a person can retire depending on their age and their gender.
+# Note : Let’s say retirement age is 67 for men, and 62 for women (born after April, 1947).
 
-#ANSWER
+# Create a function get_age(year, month, day)   
+# Hard-code the current year and month in your code (there are better ways of doing this, but for now it will be enough.)
+# After calculating the age of a person, the function should return the age (the age is an integer).
+# Create a function can_retire(gender, date_of_birth).
+# It should call the get_age function (with what arguments?) in order to receive an age.
+# Now it has all the information it needs in order to determine if the person with the given gender and date of birth is able to retire or not.
+# Calculate. You may need to do a little more hard-coding here.
+# Return True if the person can retire, and False if he/she can’t.
 
-# birthday = {
-#     'Tom' : '1991/12/05',
-#     'Ron' : '1993/10/29',
-#     'Sam' : '1998/03/05',
-#     'Rose' : '2005/01/13',
-#     'Kris' : '1986/12/29'
-# }
+# user_birthday = input('When is your birthday? Answer YYYY/MM/DD: ')
+# user_gender = input("What is your gender: 'm'or 'f'? ")
 
-# user_input = input('Hi!You can look up the birthdays of the people in the list! Choose the name: ')
+# date = user_birthday.split('/')
 
-# if user_input in birthday:
-#     print(f"{user_input}'s birthday is on {birthday[user_input]}.")
+# year = int(date[0])
+# month = int(date[1])
 
-# Exercise 2: Birthdays Advanced
+# cur_year = 2023
+# cur_month = 9
+
+# def get_age(year, month):
+#     user_age = ((cur_year*12 + cur_month) - (year*12 + month))/12
+#     if user_gender == 'f'and user_age >= 62:
+#         print(f'You are {int(user_age)} years old, you can retire')
+#     elif user_gender == 'm'and user_age>= 67:
+#         print(f'You are {int(user_age)} years old, you can retire')
+#     else:
+#         print(f'You are {int(user_age)} years old, you cant retire yet')
+
+# get_age(year, month)
+
+
+# Exercise 2 : Sum
 # Instructions
-# Before asking the user to input a person’s name print out all of the names in the dictionary.
-# If the person that the user types is not found in the dictionary, print an error message (“Sorry, we don’t have the birthday information for <person’s name>”)
+# Write a function that accepts one parameter (an int: X) and returns the value of X+XX+XXX+XXXX.
+# Example:
+# If X=3, the output when calling our function should be 3702 (3 + 33 + 333 + 3333)
 
-#ANSWER
+# Hint: treating our number as a int or a str at different points in our code may be helpful
 
-# birthday = {
-#     'Tom' : '1991/12/05',
-#     'Ron' : '1993/10/29',
-#     'Sam' : '1998/03/05',
-#     'Rose' : '2005/01/13',
-#     'Kris' : '1986/12/29'
-# }
+# x = '5'
 
-# user_input = input(f'Hi! I have the list of birthdays of {birthday.keys()}. You can look up the birthdays of the people in the list! Choose the name: ')
+# def sum_num (x):
+#     start = 0
+#     for a in range(1,5):
+#         b = x*a
+#         start += int(b)
 
-# if user_input in birthday:
-#     print(f"{user_input}'s birthday is on {birthday[user_input]}.")
-# else:
-#     print(f"Sorry, we don't have information abour {user_input}'s birthday")
+#     print(start)
 
-# Exercise 3: Add Your Own Birthday
+# sum_num(x)
+
+# Exercise 3 : Double Dice
 # Instructions
-# Add this new code: before asking the user to input a person’s name to look up, ask the user to add a new birthday:
-# Ask the user for a person’s name – store it in a variable.
-# Ask the user for this person’s birthday (in the format “YYYY/MM/DD”) - store it in a variable.
-# Now add this new data into your dictionary.
-# Make sure that if the user types any name that exists in the dictionary – including the name that he entered himself – the corresponding birthday is found and displayed.
+# Create a function that will simulate the rolling of a dice. Call it throw_dice. It should return an integer between
+# 1 and 6.
+# Create a function called throw_until_doubles.
+# It should keep throwing 2 dice (using your throw_dice function) until they both land on the same number, ie. until we reach doubles.
+# For example: (1, 2), (3, 1), (5,5) → then stop throwing, because doubles were reached.
+# This function should return the number of times it threw the dice in total. In the example above, it should return 3.
 
-#ANSWER
+# Create a main function.
+# It should throw doubles 100 times (ie. call your throw_until_doubles function 100 times), and store the results of those function calls (in other words, how many throws it took until doubles were thrown, each time) in a collection. (What kind of collection? Read below to understand what we will need the data for, and this should help you decide which data structure to use).
 
-# birthday = {
-#     'Tom' : '1991/12/05',
-#     'Ron' : '1993/10/29',
-#     'Sam' : '1998/03/05',
-#     'Rose' : '2005/01/13',
-#     'Kris' : '1986/12/29'
-# }
+# After the 100 doubles are thrown, print out a message telling the user how many throws it took in total to reach 100 doubles.
+# Also print out a message telling the user the average amount of throws it took to reach doubles. Round this off to 2 decimal places.
+# For example:
 
-# user_name = input("Let's add somebody's birthday in the list! Type a name: ")
-# user_birthday = input("Now type a date od birth 'YYYY/MM/DD: ")
+# If the results of the throws were as follows (your code would do 100 doubles, not just 3):
+# (1, 2), (3, 1), (5, 5)
+# (3, 3)
+# (2, 4), (1, 2), (3, 4), (2, 2)
 
-# birthday[user_name] = [user_birthday]
-
-# user_input = input(f'So, I have the list of birthdays of {birthday.keys()}. You can look up the birthdays of the people in the list! Choose the name: ')
-
-# if user_input in birthday:
-#     print(f"{user_input}'s birthday is on {birthday[user_input]}.")
-# else:
-#     print(f"Sorry, we don't have information abour {user_input}'s birthday")
-
-# Exercise 4: Fruit Shop
-# Instructions
-
-# items = {
-#     "banana": 4,
-#     "apple": 2,
-#     "orange": 1.5,
-#     "pear": 3
-# }
-
-# print(items.items())
-
-# Using the dictionary above, each key-value pair represents an item and its price - print all the items and their prices in a sentence.
-# Using the dictionary below, each value are dictionaries containing both the price and the amount of items in stock -
-# write some code to calculate how much it would cost to buy everything in stock.
-
-# items = {
-#     "banana": {"price": 4 , "stock":10},
-#     "apple": {"price": 2, "stock":5},
-#     "orange": {"price": 1.5 , "stock":24},
-#     "pear": {"price": 3 , "stock":1}
-# }
-
-# total = 0
-
-# for i in items: 
-#     total += items[i]["price"]*items[i]["stock"]
-
-# print(total)
-
-
-    
-       
-
-
+# Then my output would show something like this:
+# Total throws: 8
+# Average throws to reach doubles: 2.67.
