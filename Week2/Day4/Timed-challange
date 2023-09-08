@@ -1,0 +1,28 @@
+# Count Occurence
+# Write a program which takes a string and a character as an input, and finds out the number of occurrences the character has in the string.
+
+# String: Programming is cool!
+# Character: o
+# 3
+
+
+# String: This is a great example
+# Character: y
+# 0
+
+# user_string = input('Give me a string: ')
+# user_letter = input('Which letter i will count? ')
+
+# def count_letter():
+#     count = 0
+#     for i in user_string:
+#         if i == user_letter:
+#             count +=1
+#     print(f"String: {user_string}\nCharacter: {user_letter}\n{count}")
+
+# count_letter()
+
+
+
+
+
