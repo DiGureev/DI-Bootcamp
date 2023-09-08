@@ -64,8 +64,48 @@
 # For example: (1, 2), (3, 1), (5,5) → then stop throwing, because doubles were reached.
 # This function should return the number of times it threw the dice in total. In the example above, it should return 3.
 
+# import random
+
+# def throw_dice():
+#     return random.randrange(1,6)
+
+# def throw_until_doubles():
+#     a = throw_dice()
+#     b = throw_dice()
+#     while a != b:
+#         a = throw_dice()
+#         b = throw_dice()
+#     print(f'We have double: {a}:{b}!')
+
+
+
+# def throw_until_doubles():
+#     a = throw_dice()
+#     b = throw_dice()
+#     if a != b:
+#         return False
+#     return True, a , b
+
+# def main():
+#     counter = 0
+#     double = 0
+#     while double != 100:
+#         x = throw_until_doubles()
+#         if x == False:
+#             counter += 1
+#         else:
+#             counter += 1
+#             double += 1
+#     aver = round(counter/double, 2)
+#     print(f'We have {double} doubles, it takes {counter} times to throw')
+#     print(f'Average throws to reach doubles: {aver}')
+
+# main()
+
+
 # Create a main function.
-# It should throw doubles 100 times (ie. call your throw_until_doubles function 100 times), and store the results of those function calls (in other words, how many throws it took until doubles were thrown, each time) in a collection. (What kind of collection? Read below to understand what we will need the data for, and this should help you decide which data structure to use).
+# It should throw doubles 100 times (ie. call your throw_until_doubles function 100 times), and store the results of those function calls (in other words, how many throws it took until doubles were thrown, each time) in a collection. 
+# (What kind of collection? Read below to understand what we will need the data for, and this should help you decide which data structure to use).
 
 # After the 100 doubles are thrown, print out a message telling the user how many throws it took in total to reach 100 doubles.
 # Also print out a message telling the user the average amount of throws it took to reach doubles. Round this off to 2 decimal places.
