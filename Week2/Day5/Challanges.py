@@ -175,6 +175,12 @@
 # Instructions
 # Given a list of integers and strings, put all the integers in one list, and all the strings in another one.
 
+# def check_list(your_list):
+#     list_int = [i for i in your_list if type(i) == int]
+#     list_str = [i for i in your_list if type(i) == str]
+#     print(f"{list_int}\n{list_str}")
+
+# check_list([1,2,'3','4',15, 'string'])
 
 # Exercise 12
 # Instructions
@@ -186,6 +192,14 @@
 #     >>>is_palindrome('John)
 #     >>>False
 
+# def isPalindrome(str):
+#     check_str = str.lower()
+#     for i in range(0, int(len(check_str)/2)):
+#         if check_str[i] != check_str[len(check_str)-i-1]:
+#             return False
+#     return True
+
+# print(isPalindrome('Aziza'))
 
 # Exercise 13
 # Instructions
@@ -196,21 +210,49 @@
 #     >>>sum_over_k(sentence,k)
 #     >>>3
 
+# sentence = 'Do or do not there is no try'
+# k=2
+
+# def sum_over_k(sentence,k):
+#     list_sent = sentence.split(' ')
+#     list_k_words = []
+#     for i in list_sent:
+#         if len(i) > k:
+#             list_k_words.append(i)
+#     print(list_k_words)
+    
+# sum_over_k(sentence,k)
 
 # Exercise 14
 # Instructions
 # Write a function that returns the average value in a dictionary (assume the values are numeric):
 
-#     >>>dict_avg({'a': 1,'b':2,'c':8,'d': 1})
-#     >>>3
+# dict_avg = {'a': 1,'b':2,'c':8,'d': 1}
+
+# def avr_num(dict_avg):
+#     av_value = 0
+#     for i,num in dict_avg.items():
+#         av_value += num
+#     print(int(av_value/len(dict_avg)))
+
+# avr_num(dict_avg)
 
 
 # Exercise 15
 # Instructions
 # Write a function that returns common divisors of 2 numbers:
+# common_div(10,20)
+# [2,5,10]
 
-#     >>>common_div(10,20)
-#     >>>[2,5,10]
+# def common_div(a,b):
+#     divisors = []
+#     for i in range(2,a+1):
+#         if a % i == 0 and b % i == 0 and i is not divisors:
+#             divisors.append(i)
+#     print(divisors)
+
+# common_div(10,20)
+
 
 
 # Exercise 16
@@ -220,6 +262,19 @@
 #     >>>is_prime(11)
 #     >>>True
 
+# a = 14
+# def prime(a):
+#     k = 0
+#     for i in range(2, a // 2+1):
+#         if a % i == 0:
+#             k = k+1
+#     if (k <= 0):
+#         print("The number is prime")
+#     else:
+#         print("The number isn't prime")
+
+# prime(a)
+
 
 # Exercise 17
 # Instructions
@@ -228,6 +283,14 @@
 #     >>>weird_print([1,2,2,3,4,5])
 #     >>>[2,4]
 
+# def if_even(your_list):
+#     true_el = []
+#     for i,element in enumerate(your_list):
+#         if i %2 == 0 and element % 2 == 0:
+#             true_el.append(element)
+#     print(true_el)
+
+# if_even([1,2,2,3,4,5])
 
 # Exercise 18
 # Instructions
@@ -236,11 +299,44 @@
 #     >>>type_count(a=1,b='string',c=1.0,d=True,e=False)
 #     >>>int: 1, str:1 , float:1, bool:2
 
+# def type_count(**other):
+#     dict_new = {
+#         'int': 0,
+#         'str': 0,
+#         'float': 0,
+#         'bool': 0,
+#     }
+#     for key,value in other.items():
+#         if type(value) == int:
+#             dict_new['int'] += 1
+#         elif type(value) == str:
+#             dict_new['str'] += 1
+#         elif type(value) == float:
+#             dict_new['float'] += 1
+#         elif type(value) == bool:
+#             dict_new['bool'] += 1
+#     print(dict_new)
+
+# type_count(a=1,b='string',c=1.0,d=True,e=False)
 
 # Exercise 19
 # Instructions
 # Write a function that mimics the builtin .split() method for strings.
 # By default the function uses whitespace but it should be able to take an argument for any character and split with that argument.
+
+# def splt(string, delimetr):
+#     new_list = []
+#     new_string = ''
+#     for i in string:
+#         if i != delimetr:
+#             new_string += i
+#         elif i == delimetr:
+#             new_list.append(new_string)
+#             new_string = ''
+#     new_list.append(new_string)
+#     return new_list
+    
+# print(splt(input('put string'), ','))
 
 
 # Exercise 20
@@ -249,3 +345,6 @@
 # Example:
 # input : "mypassword"
 # output: "***********"
+
+# user_input = input('write a password: ')
+# print('*'*len(user_input))
