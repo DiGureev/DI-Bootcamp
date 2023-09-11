@@ -1,23 +1,83 @@
-# Instructions
-# These are the rules of the Game of Life (as stated in Wikipedia):
+# Instructions :
+# Create a class to handle paginated content in a website. A pagination is used to divide long lists of content in a series of pages.
 
-# The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, (or populated and unpopulated, respectively).
+# The Pagination class will accept 2 parameters:
+# items (default: None): It will contain a list of contents to paginate.
+# pageSize (default: 10): The amount of items to show in each page.
+# So for example we could initialize our pagination like this:
 
-# Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
+# alphabetList = list("abcdefghijklmnopqrstuvwxyz")
 
-# Any live cell with fewer than two live neighbours dies, as if by underpopulation.
-# Any live cell with two or three live neighbours lives on to the next generation.
-# Any live cell with more than three live neighbours dies, as if by overpopulation.
-# Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-# Using these rules, implement the Game. (Hint: use Classes !!!!)
-# Use a few different initial states to see how the game ends.
+# p = Pagination(alphabetList, 4)
 
-# Notes:
+class Pagination:
+    def __init__(self, items = None, page_size = 10):
+        self.items = items
+        self.page_size = page_size
+        self.start_index = 0
 
-# Display the grid after each generation
-# The end of the game is fully determined by the initial state. So have it pass through your program and see how it ends.
-# Be creative, but use classes
-# The game can have fixed borders and can also have moving borders. First implement the fixed borders. Each “live” cell that is going out of the border, exits the game.
-# Bonus: Make the game with ever expandable borders, make the maximum border size a very large number(10,000) so you won’t cause a memory overflow
+    def getVisibleItems(self):
+        if len(self.items) % self.page_size > 0 and self.start_index > len(self.items) - self.page_size:
+            return self.items[self.start_index : -1]
+        return self.items[self.start_index : self.start_index + self.page_size]
+    
+    def prevPage(self):
+        if self.start_index == 0:
+            self.start_index = 0
+        else:
+            self.start_index -= self.page_size
+
+    def nextPage(self):
+        if self.start_index < len(self.items) - self.page_size:
+            self.start_index += self.page_size
+
+    #no, I dont know how to do it
+
+    firstPage()
+    lastPage()
+    goToPage(pageNum)
+
+# The Pagination class will have a few methods:
+
+# getVisibleItems() : returns a list of items visible depending on the pageSize
+# So for example we could use this method like this:
+
+# p.getVisibleItems() 
+# # ["a", "b", "c", "d"]
+# You will have to implement various methods to go through the pages such as:
+# prevPage()
+# nextPage()
+# firstPage()
+# lastPage()
+# goToPage(pageNum)
 
 
+
+
+
+# Here’s a continuation of the example above using nextPage and lastPage:
+
+# alphabetList = list("abcdefghijklmnopqrstuvwxyz")
+
+# p = Pagination(alphabetList, 4)
+
+# p.getVisibleItems() 
+# # ["a", "b", "c", "d"]
+
+# p.nextPage()
+
+# p.getVisibleItems()
+# # ["e", "f", "g", "h"]
+
+# p.lastPage()
+
+# p.getVisibleItems()
+# # ["y", "z"]
+
+
+# Notes
+
+# The second argument (pageSize) could be a float, in that case just convert it to an int (this is also the case for the goToPage method)
+# The methods used to change page should be chainable, so you can call them one after the other like this: p.nextPage().nextPage()
+# Please set the p.totalPages and p.currentPage attributes to the appropriate number as there cannot be a page 0.
+# If a page is outside of the totalPages attribute, then the goToPage method should go to the closest page to the number provided (e.g. there are only 5 total pages, but p.goToPage(10) is given: the p.currentPage should be set to 5; if 0 or a negative number is given, p.currentPage should be set to 1).
