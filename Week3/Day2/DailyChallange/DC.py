@@ -13,29 +13,55 @@
 class Pagination:
     def __init__(self, items = None, page_size = 10):
         self.items = items
-        self.page_size = page_size
-        self.start_index = 0
+        self.page_size = int(page_size)
+        self.general_list = []
+        self.cur_num = 0
 
-    def getVisibleItems(self):
-        if len(self.items) % self.page_size > 0 and self.start_index > len(self.items) - self.page_size:
-            return self.items[self.start_index : -1]
-        return self.items[self.start_index : self.start_index + self.page_size]
-    
-    def prevPage(self):
-        if self.start_index == 0:
-            self.start_index = 0
+
+    def getVisibleItems(self, page_number):
+        page = []
+        for i in self.items:
+            if len(page) < self.page_size:
+                page.append(i)
+            else:
+                self.general_list.append(page)
+                page = []
+                page.append(i)
+        self.general_list.append(page)
+        print(self.general_list[page_number])
+        self.cur_num = page_number
+
+    def firstPage(self):
+        print(self.getVisibleItems(0))
+
+    def lastPage(self):
+        print(self.getVisibleItems(-1))
+
+    def goToPage(self, pageNum):
+        if int(pageNum) == 1:
+            self.firstPage(self)
+        elif int(pageNum) == len(self.general_list)-1:
+            self.lastPage(self)
+        elif int(pageNum) > len(self.general_list):
+            self.lastPage(self)
+        elif int(pageNum) == 0:
+            print('Give me the number from 1')
         else:
-            self.start_index -= self.page_size
+            print(self.getVisibleItems(int(pageNum)-1))
+    
+
+    def prevPage(self):
+        print(self.getVisibleItems(self.cur_num - 1))
 
     def nextPage(self):
-        if self.start_index < len(self.items) - self.page_size:
-            self.start_index += self.page_size
+        print(self.getVisibleItems(self.cur_num + 1))
 
-    #no, I dont know how to do it
 
-    firstPage()
-    lastPage()
-    goToPage(pageNum)
+alphabetList = list("abcdefghijklmnopqrstuvwxyz")
+
+p = Pagination(alphabetList, 4)
+
+p.getVisibleItems()
 
 # The Pagination class will have a few methods:
 
