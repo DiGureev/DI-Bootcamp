@@ -28,6 +28,6 @@ class AnagramChecker:
         self.is_valid_word()
         list_of_anagrams = []
         for anag in self.words:
-            if ''.join(sorted(anag)) == ''.join(sorted(self.word)):
+            if ''.join(sorted(anag)) == ''.join(sorted(self.word)) and anag != self.word:
                 list_of_anagrams.append(anag) 
         print(f'YOUR WORD: {self.word}\nthis is a valid English word.\nAnagrams for your word: {list_of_anagrams}')
