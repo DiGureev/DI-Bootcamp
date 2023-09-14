@@ -1,22 +1,18 @@
-# Instructions
-# These are the rules of the Game of Life (as stated in Wikipedia):
+# Instructions :
+# This challenge is about Biology that will put emphasis on your knowledge of classes, inheritance and polymorphism.
 
-# The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, (or populated and unpopulated, respectively).
+# Build a DNA object. DNA is composed of chromosomes which is itself composed of Genes.
+# A Gene is a single value 0 or 1, it can mutate (flip).
+# A Chromosome is a series of 10 Genes. It also can mutate, meaning a random number of genes can randomly 
+#flip (1/2 chance to flip).
+# A DNA is a series of 10 chromosomes, and it can also mutate the same way Chromosomes can mutate.
 
-# Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
+# Implement these classes as you see fit.
 
-# Any live cell with fewer than two live neighbours dies, as if by underpopulation.
-# Any live cell with two or three live neighbours lives on to the next generation.
-# Any live cell with more than three live neighbours dies, as if by overpopulation.
-# Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-# Using these rules, implement the Game. (Hint: use Classes !!!!)
-# Use a few different initial states to see how the game ends.
+# Create a new class called Organism that accepts a DNA object and an environment parameter that sets the 
+#probability for its DNA to mutate.
 
-# Notes:
-
-# Display the grid after each generation
-# The end of the game is fully determined by the initial state. So have it pass through your program and see how it ends.
-# Be creative, but use classes
-# The game can have fixed borders and can also have moving borders. First implement the fixed borders. Each “live” cell that is going out of the border, exits the game.
-# Bonus: Make the game with ever expandable borders, make the maximum border size a very large number(10,000) so you won’t cause a memory overflow
+# Instantiate a number of Organism and let them mutate until one gets to a DNA which is only made of 1s. 
+#Then stop and record the number of generations (iterations) it took.
+# Write your results in you personal biology research notebook and tell us your conclusion :).
 

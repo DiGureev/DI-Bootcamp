@@ -15,42 +15,42 @@
 
 #ANSWER
 
-# class Text:
-#     def __init__(self, text = 'A good book would sometimes cost as much as a good house.'):
-#         self.text = text
+class Text:
+    def __init__(self, text = 'A good book would sometimes cost as much as a good house.'):
+        self.text = text
 
-#     def freq_word(self,word):
-#         list_words = self.text.split()
-#         count = 0
-#         for i in list_words:
-#             if i == word:
-#                 count +=1
-#         if count == 0:
-#             return None
-#         return count
+    def freq_word(self,word):
+        list_words = self.text.split()
+        count = 0
+        for i in list_words:
+            if i == word:
+                count +=1
+        if count == 0:
+            return None
+        return count
     
-#     def common(self):
-#         list_words = self.text.split()
-#         freq_word = {
+    def common(self):
+        list_words = self.text.split()
+        freq_word = {
 
-#         }
-#         for word in list_words:
-#             for i in list_words:
-#                 if list_words.count(word) > list_words.count(i):
-#                     freq_word[word] = list_words.count(word)
+        }
+        for word in list_words:
+            for i in list_words:
+                if list_words.count(word) > list_words.count(i):
+                    freq_word[word] = list_words.count(word)
         
-#         if len(freq_word) > 1:
-#             print(f'We have couple words with the same frequency: {freq_word}')
-#         else:
-#             print(freq_word)
+        if len(freq_word) > 1:
+            print(f'We have couple words with the same frequency: {freq_word}')
+        else:
+            print(freq_word)
 
-#     def unique(self):
-#         list_words = self.text.split()
-#         list_unique = []
-#         for word in list_words:
-#             if list_words.count(word) == 1:
-#                 list_unique.append(word)
-#         print(list_unique)
+    def unique(self):
+        list_words = self.text.split()
+        list_unique = []
+        for word in list_words:
+            if list_words.count(word) == 1:
+                list_unique.append(word)
+        print(list_unique)
 
 # Part II
 # Then, we will analyze a text coming from an external text file. Download the_stranger.txt file.
