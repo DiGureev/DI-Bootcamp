@@ -15,42 +15,42 @@
 
 #ANSWER
 
-class Text:
-    def __init__(self, text = 'A good book would sometimes cost as much as a good house.'):
-        self.text = text
+# class Text:
+#     def __init__(self, text = 'A good book would sometimes cost as much as a good house.'):
+#         self.text = text
 
-    def freq_word(self,word):
-        list_words = self.text.split()
-        count = 0
-        for i in list_words:
-            if i == word:
-                count +=1
-        if count == 0:
-            return None
-        return count
+#     def freq_word(self,word):
+#         list_words = self.text.split()
+#         count = 0
+#         for i in list_words:
+#             if i == word:
+#                 count +=1
+#         if count == 0:
+#             return None
+#         return count
     
-    def common(self):
-        list_words = self.text.split()
-        freq_word = {
+#     def common(self):
+#         list_words = self.text.split()
+#         freq_word = {
 
-        }
-        for word in list_words:
-            for i in list_words:
-                if list_words.count(word) > list_words.count(i):
-                    freq_word[word] = list_words.count(word)
+#         }
+#         for word in list_words:
+#             for i in list_words:
+#                 if list_words.count(word) > list_words.count(i):
+#                     freq_word[word] = list_words.count(word)
         
-        if len(freq_word) > 1:
-            print(f'We have couple words with the same frequency: {freq_word}')
-        else:
-            print(freq_word)
+#         if len(freq_word) > 1:
+#             print(f'We have couple words with the same frequency: {freq_word}')
+#         else:
+#             print(freq_word)
 
-    def unique(self):
-        list_words = self.text.split()
-        list_unique = []
-        for word in list_words:
-            if list_words.count(word) == 1:
-                list_unique.append(word)
-        print(list_unique)
+#     def unique(self):
+#         list_words = self.text.split()
+#         list_unique = []
+#         for word in list_words:
+#             if list_words.count(word) == 1:
+#                 list_unique.append(word)
+#         print(list_unique)
 
 # Part II
 # Then, we will analyze a text coming from an external text file. Download the_stranger.txt file.
@@ -61,15 +61,15 @@ class Text:
 
 #ANSWER
 
-import os
+# import os
 
-class Text:
+# class Text:
 
-    @classmethod
-    def from_file(cls, input_file):
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        with open(f"{dir_path}/{input_file}", "r") as my_file:
-            return my_file.read()
+#     @classmethod
+#     def from_file(cls, input_file):
+#         dir_path = os.path.dirname(os.path.realpath(__file__))
+#         with open(f"{dir_path}/{input_file}", "r") as my_file:
+#             return my_file.read()
 
 # print(Text.from_file('the_stranger.txt'))
 
@@ -90,16 +90,16 @@ class Text:
 
 # nltk.download('stopwords')
 
-class TextModification(Text):
+# class TextModification(Text):
 
-    def without_punc(self, input_file):
-        text = self.from_file(input_file)
-        result = ''.join(filter(lambda x: x.isalpha() or x.isdigit() or x.isspace(), text))
-        return result
+#     def without_punc(self, input_file):
+#         text = self.from_file(input_file)
+#         result = ''.join(filter(lambda x: x.isalpha() or x.isdigit() or x.isspace(), text))
+#         return result
     
-    def spec(self, input_file, char):
-        text = self.from_file(input_file)
-        return text.replace(char,'')
+#     def spec(self, input_file, char):
+#         text = self.from_file(input_file)
+#         return text.replace(char,'')
 
     
     # def stop(self,input_file):
@@ -108,6 +108,6 @@ class TextModification(Text):
     #     tokens_without_sw = [word for word in text_tokens if not word in nltk.stopwords.words()]
     #     print(tokens_without_sw)
 
-a = TextModification()
+# a = TextModification()
 
-print(a.spec('the_stranger.txt', 'a'))
+# print(a.spec('the_stranger.txt', 'a'))
