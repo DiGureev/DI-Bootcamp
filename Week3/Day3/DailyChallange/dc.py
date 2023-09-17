@@ -8,6 +8,8 @@
 
 # class Circle:
 
+#     all_circles = []
+
 #     def __init__(self, radius = None, diametr = None):
 #         if radius == None and diametr == None:
 #             raise ValueError('Should be either radius or diametr')
@@ -36,33 +38,30 @@
 # # Be able to add two circles together, and return a new circle with the new radius - use a dunder method
 
 #     def __add__(self, other_circle):
-#         new_radius = self.radius + other_circle.radius
-#         new_diametr = self.diametr + other_circle.diametr
-#         return Circle(new_radius, new_diametr)
+#         return Circle(self.radius + other_circle.radius)
 
 # # Be able to compare two circles to see which is bigger, and return a Boolean - use a dunder method
 
 #     def __gt__(self, other_circle) :
-#         if self.diametr > other_circle.diametr:
-#             return True
-#         else :
-#             return False
+#         return self.diametr > other_circle.diametr
         
 # # Be able to compare two circles and see if there are equal, and return a Boolean- use a dunder method
 
 #     def __eq__(self, other_circle):
-#         if self.diametr == other_circle.diametr:
-#             return True
-#         else:
-#             return False
+#         return self.diametr == other_circle.diametr
 
 # # Be able to put them in a list and sort them
 
-#     def circle_list(self, other_circle):
-#         list_circle = []
-#         list_circle.append(self)
-#         list_circle.append(other_circle)
-#         return sorted(list_circle)
+    # @staticmethod
+    # def get_radius(circle):
+    #     return circle.radius
+        
+    # @classmethod
+    # def circle_list(cls):
+    #     list_circle = sorted(cls.all_circles, key = cls.get_radius)
+    #     for circle in list_circle:
+    #         print(circle)
+    #     return list_circle
     
 # # Bonus (not mandatory) : Install the Turtle module, and draw the sorted circles
 
