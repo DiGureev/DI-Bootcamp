@@ -21,10 +21,11 @@
 
 #Answer
 
-my_list = []
-times = 0
-while times != 5:
-    input_list = input('Give me Name, Age, Score with comma: ')
-    my_list.append(tuple(input_list.split(",")))
-    times +=1
-print(sorted(my_list, key=lambda data:(data[0], data[1], data[2])))
+# my_list = []
+# times = 0
+# while times != 5:
+#     input_list = input('Give me Name, Age, Score with comma: ')
+#     my_list.append(tuple(input_list.split(",")))
+#     times +=1
+# print(sorted(my_list, key=lambda data:(data[0], data[1], data[2])))
+
