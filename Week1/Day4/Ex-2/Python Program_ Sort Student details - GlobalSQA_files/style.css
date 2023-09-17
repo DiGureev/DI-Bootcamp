@@ -1,0 +1,33 @@
+/*
+*/
+
+@import url("stylesheets/skeleton.css");
+@import url("stylesheets/stylesheet.css");
+@import url("stylesheets/flexslider.css");
+@import url("stylesheets/prettyPhoto.css");
+@import url("stylesheets/carousel.css");
+
+
+.widget_minimax_tabwidget ul#tabs {
+  width:20%;
+  float:left;
+}
+.widget_minimax_tabwidget ul#tabs li {
+    width: 100% !important;
+    border: 1px solid #ccc !important;
+}
+.widget_minimax_tabwidget .tab-content {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    width: 80%;
+    float: left;
+}
+
+.w3eden .nav-tabs > li.active > a, .w3eden .nav-tabs > li.active > a:hover, .w3eden .nav-tabs > li.active > a:focus {
+    color: #555;
+     background-color: none !important;
+    border: none !important;
+    border-bottom-color: transparent;
+    cursor: default;
