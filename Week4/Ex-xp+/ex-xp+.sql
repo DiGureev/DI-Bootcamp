@@ -30,4 +30,5 @@
 -- select * from students where first_name like '%a';
 -- select * from students where first_name like '_%a%';
 -- select * from students where id in (1,3);
+-- select * from students where birth_date >= '2000-01-01';
 
