@@ -23,11 +23,17 @@
 -- right join payment
 -- on customer.customer_id = payment.customer_id;
 
+-- first approach:
+
 -- select film.title, inventory.film_id from film
 -- full join inventory
 -- on film.film_id = inventory.film_id
 -- where inventory.film_id is null
 -- order by film.film_id;
+
+-- second approach:
+
+-- select title from film where film.film_id not in (select inventory.film_id from inventory)
 
 -- select city.city, country.country from city
 -- inner join country
