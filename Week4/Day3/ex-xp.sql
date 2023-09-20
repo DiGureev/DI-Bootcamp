@@ -102,17 +102,19 @@
 -- and rental.return_date between '2005-07-28' and '2005-08-01'
 -- ;
 
--- select film.title, film.description, payment.amount from customer
--- full join payment
--- on payment.customer_id = customer.customer_id
--- full join rental
--- on customer.customer_id = rental.customer_id
--- full join inventory
--- on inventory.inventory_id = rental.inventory_id
--- full join film
--- on inventory.film_id = film.film_id
--- where customer.first_name ='Matthew' and customer.last_name ='Mahan'
--- and film.description like '%boat%' 
--- group by film.title, film.description, payment.amount
--- having max(payment.amount) >7;
+select film.title, film.description, film.replacement_cost from customer
+full join payment
+on payment.customer_id = customer.customer_id
+full join rental
+on customer.customer_id = rental.customer_id
+full join inventory
+on inventory.inventory_id = rental.inventory_id
+full join film
+on inventory.film_id = film.film_id
+where customer.first_name ='Matthew' and customer.last_name ='Mahan'
+and (film.description ilike '%boat%' or film.title ilike '%boat%')
+
+group by film.title, film.description, film.replacement_cost
+order by film.replacement_cost desc
+limit 1;
 
