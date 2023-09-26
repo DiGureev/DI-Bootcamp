@@ -24,12 +24,12 @@ class Gene:
         self.gene = choice(self.mut)
 
     def flip(self):
-        if self.gene == 1:
+        if self.gene == 1: #this piece of code I need to make it easier for programm to idealy mutate, otherwise we can wait fr mutation almost all out life.
             return
         self.gene = choice(self.mut)
 
     def __str__(self):
-        return f'{self.gene}'
+        return f'{self.gene}' #This method I need in my check_DNA function to check DNA by the gene value and not by object
 
 
 class Chromosome:
@@ -41,43 +41,46 @@ class Chromosome:
             self.list_gen.append(one_gene)
     
     def mutate(self):
-        if self.list_gen == [1,1,1,1,1,1,1,1,1,1]:
+        if self.list_gen == [1,1,1,1,1,1,1,1,1,1]: #This piece of code I also need to make it easier for programm to idealy mutate.
             return
-        choice = randrange(10)
-        mutate_genes = sample(self.list_gen, choice)
+        mutate_genes = sample(self.list_gen, randrange(10))
         for gen in mutate_genes:
             gen.flip()
 
 
 class DNA:
 
-    def __init__(self, mut = False):
+    def __init__(self):
         self.list_chro = []
         for one_chro in range(10):
             one_chro = Chromosome()
             self.list_chro.append(one_chro)
-        
-        self.mut = mut
 
+        
     def mutate(self):
-        choice = randrange(10)
-        mutate_chro_list = sample(self.list_chro, choice)
+        mutate_chro_list = sample(self.list_chro, randrange(10))
         for chro in mutate_chro_list:
             chro.mutate()
 
 a = DNA()
 
-class Organizm:
-    def __init__(self, mutate):
-        self.dna = DNA(mutate)
-
-    def check_dna(self):
+class Organism:
+    def __init__(self, mutate = False): #Organizm needs to know whether it should mutate or not, by default it shouldn't.
+        self.dna = DNA()
+        self.mut = mutate
+    
+        if self.mut == True:
+            self.mutate()
+    
+    def org_dna(self):
         string_gen = ''
         for chromosome in self.dna.list_chro:
             for gen in chromosome.list_gen:
                 string_gen += gen.__str__()
-        print(string_gen)
-        if '0' in string_gen:
+        return string_gen
+
+    def check_dna(self):
+        if '0' in self.org_dna():
             return False
         else:
             return True
@@ -85,14 +88,16 @@ class Organizm:
     def mutate(self):
         count = 0
         while self.check_dna() == False:
-            self.check_dna()
             count +=1
             self.dna.mutate()
+            self.check_dna()
         else:
             print(count)
 
 
-organizm = Organizm(False)
+organism1 = Organism(True)
+organism2 = Organism(False)
+print(organism1.org_dna())
+print(organism2.org_dna())
 
-organizm.mutate()
 
