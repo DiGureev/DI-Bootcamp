@@ -1,13 +1,11 @@
 # Problem Description
-# Write a Python program that checks if the given expression has balanced parentheses or not. An expression is said to have balanced parentheses if each opening symbol has a corresponding closing symbol and the pairs of parentheses are properly nested.
+# Write a Python program that checks if the given expression has balanced parentheses or not. An expression is said 
+#to have balanced parentheses if each opening symbol has a corresponding closing symbol and the pairs of parentheses are properly nested.
 
 # For simplicity, you can consider these three types of parentheses: round (), square [], and curly {}.
 
-
-
 # Input:
 # A string expr containing an expression that may include parentheses, numbers, and basic arithmetic operators.
-
 
 # Output:
 # Return True if the expression has balanced parentheses.
@@ -24,6 +22,26 @@
 # Input: "((1 + 2)"
 # Output: False
 
+user_input = '(1 + 2) * {[(3 / 4) - 5]}'
+open = ['[', '(', '{']
+close = [']', ')', '}']
+
+cur = ['[', ]
+
+for i in user_input:
+    if i in open:
+        cur.append(i)
+    if i in close:
+        x = cur[-1] 
+        cur.append(i)
+        if open.index(x) == close.index(i):
+            cur.pop()
+        
+
+if len(cur):
+    print(False)
+else:
+    print(True)
 
 
 # Constraints
