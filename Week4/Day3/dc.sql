@@ -1,3 +1,73 @@
+-- Part 1
+
+-- create table customer (
+-- id serial primary key,
+-- 	first_name varchar,
+-- 	last_name varchar NOT NULL
+-- );
+
+-- create table customer_profile (
+-- id serial primary key,
+-- 	isLoggedIn boolean DEFAULT false,
+-- 	customer_id integer,
+	
+-- 	foreign key(customer_id) references customer(id)
+-- );
+
+-- insert into customer(first_name, last_name)
+-- values
+-- ('John', 'Doe'),
+-- ('Jerome', 'Lalu'),
+-- ('Lea', 'Rive');
+
+-- insert into customer_profile(isLoggedIn, customer_id)
+-- values
+-- (True, (select id from customer where name = 'John' )),
+-- (False, (select id from customer where name = 'Jerome' ))
+-- ;
+
+-- select customer.first_name from customer
+-- inner join customer_profile
+-- on customer.id = customer_profile.customer_id 
+-- where customer_profile.isLoggedIn = True
+
+-- select customer.first_name, customer_profile.isLoggedIn from customer
+-- full join customer_profile
+-- on customer.id = customer_profile.customer_id 
+
+-- select count(customer.first_name) from customer
+-- full join customer_profile
+-- on customer.id = customer_profile.customer_id 
+-- where customer_profile.isLoggedIn = False
+
+
+-- Part 2
+-- create table Book(
+-- book_id SERIAL PRIMARY KEY,
+--     title varchar NOT NULL, 
+--     author varchar NOT NULL
+-- );
+
+-- insert into Book(title, author)
+-- values
+-- ('Alice In Wonderland', 'Lewis Carroll'),
+-- ('Harry Potter', 'J.K Rowling'),
+-- ('To kill a mockingbird', 'Harper Lee');
+
+-- create table Student (
+-- student_id SERIAL PRIMARY KEY,
+--     name varchar NOT NULL UNIQUE, 
+--     age integer (check age < 15)
+-- );
+
+-- insert into Student (name, age)
+-- values
+-- ('John', '12'),
+-- ('Lera', '11'),
+-- ('Patrick', '10'),
+-- ('Bob', '14');
+
+
 -- create table library(
 -- book_fk_id int,
 -- 	student_fk_id int,
