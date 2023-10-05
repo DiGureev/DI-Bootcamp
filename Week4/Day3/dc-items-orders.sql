@@ -42,10 +42,21 @@ END;
 
 $price$ LANGUAGE sql;
 
+-- Juliana's version
 
--- ERROR:  syntax error at or near "RETURN"
--- LINE 40:  RETURN(SELECT SUM(price) FROM items WHERE order_id = (SELEC...
---           ^ 
+-- -- CREATE or REPLACE function get_sum(name varchar) RETURNS int AS $price$
+-- -- DECLARE
+-- --     result INT;
+-- -- BEGIN
+-- --     SELECT SUM(price) INTO result FROM items WHERE order_id = (SELECT ID FROM orders WHERE customer_name = name);
+-- -- 	RETURN result;
 
--- SQL state: 42601
--- Character: 1242
+-- -- $price$ LANGUAGE sql;
+
+
+-- -- ERROR:  syntax error at or near "RETURN"
+-- -- LINE 40:  RETURN(SELECT SUM(price) FROM items WHERE order_id = (SELEC...
+-- --           ^ 
+
+-- -- SQL state: 42601
+-- -- Character: 1242
