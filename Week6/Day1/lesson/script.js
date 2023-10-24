@@ -77,3 +77,4 @@ const lis = document.querySelectorAll('.list li')
 //     console.log(li.firstElementChild.textContent)
 // }
 
+
