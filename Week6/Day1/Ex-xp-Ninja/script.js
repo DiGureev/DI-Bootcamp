@@ -119,9 +119,13 @@
 // The calendar should be a table, where a week is <tr>, and a day is <td>. The table top should be <th> with weekday names: the first day should be Monday, and so on until Sunday.
 // For instance, createCalendar(2012, 9) should generate the following calendar:
 
+//Calendar online
+
 function createCalendar(year, month){
     const body = document.querySelector('body')
     const table = document.createElement('table')
+    table.style.width = '80vw'
+
     body.append(table)
 
     const checkMonth = {
@@ -153,37 +157,39 @@ function createCalendar(year, month){
     }
 
     function checkWeeks(month){
-        // index = 0
-        // checkDay.forEach((item, i)=>{
-        //     if (item == firstDay(year, month)){
-        //         index = i
-        //     }
-        // })
-        return Math.ceil(checkMonth[month]/7)
+        index = 0
+        checkDay.forEach((item, i)=>{
+            if (item == firstDay(year, month)){
+                index = i
+            }
+        })
+        return Math.ceil((checkMonth[month] + index)/7)
     }
 
     function firstDay(year,month){
-        let dateStart = new Date(year,month);
+        let dateStart = new Date(year,month-1);
         return dateStart.toString().slice(0,3)
     }
 
 
-    function createTable(){
+    function createTable () {
         let rowClass = 1
         let index = 0
-        let th = document.createElement('th')
+        let tr = document.createElement('tr')
         for(i = 0; i < 7; i++){
-            let td = document.createElement('td')
-            td.append(document.createTextNode(checkDay[index]))
+            let th = document.createElement('th')
+            th.append(document.createTextNode(checkDay[index]))
             index +=1
-            th.append(td)
+            tr.append(th)
         }
-        table.append(th)
+        tr.classList.add('header')
+        tr.style.backgroundColor = 'lightgreen'
+        table.append(tr)
 
         for (i = 0; i < checkWeeks(month); i++){
             let tr = document.createElement('tr')
             if (rowClass%2 == 0){
-                tr.style.backgroundColor = 'lightgrey'
+                tr.style.backgroundColor = 'lightblue'
             }
             tr.classList.add(rowClass)
             rowClass +=1
@@ -200,7 +206,7 @@ function createCalendar(year, month){
         let targetIndex = 0
         checkDay.forEach((item, index) => {
             if (item == firstDay(year, month)){
-                targetIndex = index+7
+                targetIndex = index
             }
         })
         return targetIndex
@@ -219,11 +225,9 @@ function createCalendar(year, month){
     
     createTable()
     let tdList = document.querySelectorAll('td')
-    console.log(tdList.length)
-
     fillTable()
     
 }
 
 
-createCalendar(2023, 10)
+createCalendar(2023, 12)
