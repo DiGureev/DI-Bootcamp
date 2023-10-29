@@ -1,0 +1,46 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(204, 202, 202);
+}
+
+#container {
+    display: flex;
+    padding: 10px
+}
+
+#colors {
+    width: 30vw;
+}
+
+#color-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2px;
+
+}
+
+.blocks {
+    height: 11vh;
+    border: 0.5px solid black;
+    box-sizing: border-box;
+}
+
+#clear {
+    width: 100%;
+    height: 7vh;
+    margin-bottom: 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+
+#color-table {
+    width: 70vw;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(60, 1fr);
+    gap: 0px;
+    background-color: white;
+  }
