@@ -52,5 +52,4 @@ const getGif = async (category) => {
     
 }
 
-getGif('sun')
 
