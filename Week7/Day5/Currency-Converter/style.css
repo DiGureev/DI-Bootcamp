@@ -1,0 +1,49 @@
+body {
+    font-family: "Roboto";
+    background-image: url('bg-pattern.jpg');
+    background-repeat: repeat;
+    background-size: 300px auto;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+}
+
+form {
+    margin: auto;
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-color: wheat;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#curFrom, #curTo, #amount{
+    width: 80%;
+    align-self: center;
+}
+
+#btn {
+    background-color: rgb(146, 87, 201);
+    width: 50%;
+    align-self: center;
+}
+
+#result {
+    height: 30px;
+}
+
+@media screen and (min-width: 1200px){
+    form{
+        height: 50vh;
+    }
+
+    #curFrom, #curTo, #amount{
+        width: 60%;
+    }
+}

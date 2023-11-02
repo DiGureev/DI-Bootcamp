@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/449e4dee85.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form method="GET">
+        <label for="curFrom">From:</label>
+        <div>
+        <select id="curFrom">
+
+        </select>
+        <i id="from" class="fa-solid fa-repeat"></i>
+        </div>
+        <label for="curTo">To:</label>
+        <div>
+        <select id="curTo">
+        </select>
+        </div>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" pattern="[0-9]"/>
+        <div id="result"></div>
+        <button id="btn">Convert</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
