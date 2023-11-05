@@ -17,7 +17,6 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: center;
     background-color: wheat;
     padding: 30px;
     border-radius: 10px;
@@ -25,13 +24,11 @@ form {
 
 #curFrom, #curTo, #amount{
     width: 80%;
-    align-self: center;
 }
 
 #btn {
     background-color: rgb(146, 87, 201);
     width: 50%;
-    align-self: center;
 }
 
 #result {
