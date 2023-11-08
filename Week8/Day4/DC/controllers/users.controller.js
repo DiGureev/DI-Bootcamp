@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt")
 const {
   _getAllUsers,
   _getUserById,
@@ -50,13 +51,16 @@ const loginUser = async (req, res) => {
   try{
     const data = await _loginUser(username)
     console.log(data)
-    if (data[0]['password'] === password){
+    bcrypt.compare(password, data[0]['password'], function(err, result) {
+      if (result) {
         res.status(200).json({msg:'Success!'})
         console.log('I am done')
-      } else {
+      }else {
         res.status(404).json({msg:'Error!'})
         console.log('error here')
       }
+      });
+    
     } catch (e) {
       console.log(e)
       res.status(404).json({msg: "No products to update"});

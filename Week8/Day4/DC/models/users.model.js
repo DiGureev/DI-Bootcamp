@@ -1,4 +1,5 @@
 const {db} = require("../config/db.js")
+const bcrypt = require("bcrypt")
 
 const _getAllUsers = () => {
     return db("users").select('email', 'username', 'first_name', 'last_name');
@@ -16,9 +17,10 @@ const _registerUser = async (email, username, password, first_name, last_name) =
             .insert({email, username, first_name, last_name})
             .transacting(trx)
 
-        const hashpwd = await db('hashpwd')
-            .insert({username, password})
-            .transacting(trx)
+        bcrypt.hash(password, 10, async function(err, hash) {
+            const hashpwd = await db('hashpwd')
+            .insert({username, password: hash})
+        });
 
         await trx.commit();
     } catch(e) {
