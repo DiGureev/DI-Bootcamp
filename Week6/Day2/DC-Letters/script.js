@@ -9,24 +9,24 @@
 
 // Hint : Check out keycodes in Javascript or Regular Expressions
 
-// let input = document.querySelector('input')
-// let body = document.querySelector('body')
+let input = document.querySelector('input')
+let body = document.querySelector('body')
 
-// let numbers = '0123456789'
-// let specialChar = "'./,?!@#$%^&*()_+-=\||`~:;"
+let numbers = '0123456789'
+let specialChar = "'./,?!@#$%^&*()_+-=\||`~:;"
 
 
-// input.addEventListener('keydown', function (e) {
-//     if (numbers.includes(e.key) || specialChar.includes(e.key)){
-//         document.querySelector('body').innerHTML = `You are trying to type in something that is not a letter`;
-//         setTimeout(()=>{
-//             location.reload()
-//         }, 2000)
-//     } else if (e.key == 'Enter') {
-//         document.querySelector('body').innerHTML = input.value
-//         setTimeout(()=>{
-//             location.reload()
-//         }, 2000)
-//     }
+input.addEventListener('keydown', function (e) {
+    if (numbers.includes(e.key) || specialChar.includes(e.key)){
+        document.querySelector('body').innerHTML = `You are trying to type in something that is not a letter`;
+        setTimeout(()=>{
+            location.reload()
+        }, 2000)
+    } else if (e.key == 'Enter') {
+        document.querySelector('body').innerHTML = input.value
+        setTimeout(()=>{
+            location.reload()
+        }, 2000)
+    }
 
-//   });
+  });
