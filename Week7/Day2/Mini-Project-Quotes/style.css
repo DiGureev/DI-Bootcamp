@@ -1,0 +1,50 @@
+body {
+    margin: auto;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 400px;
+    margin: auto;
+    height: 600px;
+    padding: 30px;
+    background-color: rgb(95, 77, 48);
+    text-align: center;
+}
+
+#text {
+    width: 90%;
+    margin: 20px 0px;
+    height: auto;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+button {
+    border: 0px;
+    border-radius: 2px;
+    background-color: rgb(95, 226, 206);
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+#wrapper {
+    height: 250px;
+}
+
+#newQoute {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+}
+
+#charsSpace, #charsNoSpace, #words, #likes {
+    font-size: 0.5em;
+    margin: 5px;
+    width: 150px;
+    height: 50px;
+    vertical-align: top;
+}
