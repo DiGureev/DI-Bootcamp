@@ -1,0 +1,70 @@
+#root {
+  max-width: 800px;
+  margin: auto;
+}
+
+.head {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.icon {
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 60px;
+  color: #ef5130;
+  width: 30%;
+}
+
+.textBlock {
+  width: 60%;
+}
+
+.mini-i{
+  display: flex;
+}
+.mini-i p {
+  margin: 0;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.iconsText {
+  width: 50%
+}
+.form{
+  width: 50%;
+}
+
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 100%;
+  background-color: #ef5130;
+  color: white;
+  border: 0;
+  padding: 5px 10px;
+}
+
+.ContactContainer {
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.ContactContainer h2 {
+  text-align: center;
+}
+
+.iconsText p, .iconsText div {
+  vertical-align: middle;
+}
