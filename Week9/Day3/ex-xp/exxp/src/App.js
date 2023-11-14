@@ -4,6 +4,8 @@ import {Exercise} from './components/Exercise3.js'
 
 import {UserFavoriteAnimals} from './components/UserFavoriteAnimals.js'
 
+import {DemoCarousel} from './components/Carousel.js'
+
 const myelement = <h1>I Love JSX!</h1>;
 const sum = 5+5
 
@@ -29,7 +31,8 @@ function App() {
         })
         }
         </ul> */}
-      <Exercise />
+      {/* <Exercise /> */}
+      <DemoCarousel/>
       </header>
     </div>
   );
