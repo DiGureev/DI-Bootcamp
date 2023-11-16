@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Quote from './Components/Quotes.js'
+import Calc from './Components/Calculator.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Quote/>
+        <Calc />
       </header>
     </div>
   );
