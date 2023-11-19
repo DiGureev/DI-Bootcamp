@@ -43,8 +43,26 @@ const quotes = [
     },
     {
         id: 7,
-        author: 'Steve Jobs',
-        quote: "I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what's next.",
+        author: 'Golda Meir',
+        quote: "Authority poisons everybody who takes authority on himself.",
+        likes: 0
+    },
+    {
+        id: 8,
+        author: 'Golda Meir',
+        quote: "Not being beautiful was the true blessing. Not being beautiful forced me to develop my inner resources. The pretty girl has a handicap to overcome.",
+        likes: 0
+    },
+    {
+        id: 9,
+        author: 'Golda Meir',
+        quote: "Peace will come when the Arabs will love their children more than they hate us.",
+        likes: 0
+    },
+    {
+        id: 10,
+        author: 'Golda Meir',
+        quote: "Don't be humble...you're not that great.",
         likes: 0
     },
 ]
