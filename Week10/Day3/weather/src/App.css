@@ -1,0 +1,86 @@
+.App {
+  margin-top: 20px;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: deepskyblue;
+  height: 100vh;
+}
+
+nav {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 80vw;
+  max-width: 800px;
+  margin: auto;
+}
+
+.input {
+  width: 50vw;
+  max-width: 300px;
+  height: 30px;
+  border: 0px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+button {
+  height: 32px;
+  background-color: #FF9200;
+  border: 0;
+  color: white;
+  font-size: 18px;
+}
+
+.card {
+  width:80vw;
+  margin: auto;
+  max-width: 800px;
+  height: 500px;
+  background-color:white;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  height: 50px;
+  align-content: center;
+}
+
+.city {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  color: black;
+}
+
+.forcast {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.forcastCard {
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 100px;
+  height: auto;
+}
