@@ -17,7 +17,16 @@ const _search4Product = (name) => {
 }
 
 const _updatePost = (id, name, price) => {
-  return db("products").update({name, price}, ['id', 'name', 'price']).where({id});
+  return db("products")
+  .update({name, price}, ['id', 'name', 'price'])
+  .where({id});
+}
+
+const _deleteProduct = (id) => {
+  return db("products")
+  .where({id})
+  .del()
+  .returning(['id', 'name', 'price'])
 }
 
 module.exports = {
@@ -25,5 +34,6 @@ module.exports = {
   _getOneProduct,
   _addProduct,
   _search4Product,
-  _updatePost
+  _updatePost,
+  _deleteProduct
 };

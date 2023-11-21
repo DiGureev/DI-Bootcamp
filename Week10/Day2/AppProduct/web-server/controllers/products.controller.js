@@ -4,7 +4,8 @@ const {
   _getOneProduct,
   _addProduct,
   _search4Product,
-  _updatePost
+  _updatePost,
+  _deleteProduct
 } = require("../models/products.model.js");
 
 const getAllProducts = async (req, res) => {
@@ -65,16 +66,6 @@ const addProduct = async (req, res) => {
   // res.status(201).json(products);
 };
 
-const deleteProduct = (req, res) => {
-  const { id } = req.params;
-  const indx = products.findIndex((item) => item.id == id);
-  if (indx === -1) return res.sendStatus(404); //.send('deleted')//.json({ message: "not found" });
-  const deleted = products.splice(indx, 1);
-  //   res.json(deleted)
-  // res.send('deleted')
-  res.sendStatus(201);
-};
-
 /*
 id - params
 data {name, price} - body
@@ -90,6 +81,18 @@ const updateProduct = async (req, res) => {
   } catch (e) {
     console.log(e);
     res.status(404).json({ msg: "Can not add a product" });
+  }
+};
+
+
+const deleteProduct = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const data = await _deleteProduct(id);
+    res.status(200).json({ msg: "Deleted" });
+  } catch (e) {
+    console.log(e);
+    res.status(404).json({ msg: "Can't delete" });
   }
 };
 

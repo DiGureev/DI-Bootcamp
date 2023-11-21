@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 const Product = (props)=>{
@@ -8,6 +8,7 @@ const Product = (props)=>{
         name: '',
         price: ''    })
     const params = useParams()
+    const navigate = useNavigate()
 
     const product = async (id) => {
         try {
@@ -43,15 +44,32 @@ const Product = (props)=>{
             console.log(e);
         }
     }
+
+    const delProduct = async () =>{
+        try{
+            let res = await fetch(`http://localhost:3005/api/products/${params.id}`, {
+            method: "DELETE",
+            headers: { "content-type": "application/json" },
+        })
+        navigate('/')
+        console.log(res.json)
+
+        }catch(e){
+            console.log(e)
+        }
+
+    }
     
     return (
         <>
             <h2>Product</h2>
             <form onSubmit={(e) => updateProduct(e)}>
-                name: <input onChange={(e) => setInputs({...inputs, name:e.target.value})}/>
-                price: <input onChange={(e) => setInputs({...inputs, price: e.target.value})}/>
+                name: <input value={inputs.name} onChange={(e) => setInputs({...inputs, name:e.target.value})}/>
+                price: <input value={inputs.price} onChange={(e) => setInputs({...inputs, price: e.target.value})}/>
                 <input type='submit' value='Update'/>
             </form>
+            <h2>Delete product:</h2>
+            <button onClick={delProduct}>Delete</button><br/>
             <div style={{
               display: "inline-block",
               padding: "20px",
