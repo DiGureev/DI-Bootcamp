@@ -3,6 +3,7 @@ import './App.css';
 import {Routes, Route, Link} from 'react-router-dom'
 import Search from './Components/Search';
 import {useState, createContext} from 'react'
+import Favorite from './Components/Favorite.js';
 
 export const AppContext = createContext()
 
@@ -17,9 +18,8 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={<AppContext.Provider value={{favorite, setFavorite}}><Search/></AppContext.Provider>}/>
-        {/* <Route path='/favorite' element={<Favor}/> */}
+        <Route path='/favorite' element={<AppContext.Provider value={{favorite, setFavorite}}><Favorite/></AppContext.Provider>}/>
       </Routes>
-      {favorite}
     </div>
   );
 }

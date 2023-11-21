@@ -5,6 +5,7 @@ import Forcast from './Forcast.js'
 
 const Search = (props) => {
     const [city, setCity] = useState('')
+    const [keyCity, setKey] = useState('')
     const [today, setToday] = useState('')
     const [allForcast, setForcast] = useState([])
     const [image, setImg] = useState([])
@@ -16,10 +17,12 @@ const Search = (props) => {
         try {
            let data = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=R2NZjvFkgSK6h6GobXtvLK5hI2rbZ6Ag&q=${q}&language=en-us`)
            let key = data.data[0].Key
+           setKey(key)
            setCity(data.data[0].AdministrativeArea.LocalizedName)
            getDay(key)
            getForcast(key)
-           getImgage()
+           console.log(today)
+           getImage()
         } catch (e) {
             console.log(e)
         }  
@@ -50,7 +53,8 @@ const Search = (props) => {
         }
     }
     
-    const getImgage = () => {
+    const getImage = () => {
+        console.log(today)
         if (today > 20 ){
             setImg('https://cdn.iconscout.com/icon/free/png-256/free-weather-191-461610.png?f=webp')
         } else if (today > 5) {
@@ -64,7 +68,7 @@ const Search = (props) => {
         <div className='container'>
         <input className='input' type='text' ref={qRef}/><button onClick={getKey}>Search</button>
         
-        <Forcast city={city} today={today} allForcast={allForcast} image={image}/>
+        <Forcast keyCity={keyCity} city={city} today={today} allForcast={allForcast} image={image}/>
         </div>
     )
 }

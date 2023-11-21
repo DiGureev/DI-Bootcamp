@@ -1,18 +1,20 @@
-import {useContext} from 'react'
+import {useContext, useState} from 'react'
 import { AppContext } from '../App.js'
 
 
 const Forcast = (props) => {
-    const {city, today, allForcast,image} = props
+    const {keyCity, city, today, allForcast,image} = props
     const {favorite, setFavorite} = useContext(AppContext)
+    const [display, setDisplay] = useState('none')
 
     const putFav = () => {
-        let arr = favorite.map(a => ({...a}));
-        let newObj = {city, today, allForcast, image}
+        let arr = [...favorite];
+        let newObj = {keyCity, city, today, allForcast, image}
         console.log(newObj)
         arr.push(newObj)
         console.log(arr)
         setFavorite(arr)
+        setDisplay('block')
     }
 
     if (allForcast.length > 0){
@@ -27,7 +29,8 @@ const Forcast = (props) => {
                         </div>
                     </div>
                     <div>
-                        <button onClick={putFav}>Add to My Fav</button>
+                        <button onClick={()=>putFav()}>Add to My Fav</button>
+                        <div style={{display: {display}}}>Location added</div>
                     </div>
                 </div>
                 <div>

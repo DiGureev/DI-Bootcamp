@@ -1,5 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  margin-top: 20px;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
@@ -71,7 +75,7 @@ button {
   color: black;
 }
 
-.forcast {
+.forcast, .favmain {
   width: 80%;
   margin: auto;
   display: flex;
