@@ -8,8 +8,8 @@ function App() {
   const dispatch = useDispatch()
   let task = useRef('')
   let date = useRef('')
-  let newTask = useRef('')
   const [disp, setDisp]= useState('none')
+  const [newTask, setNewTask]= useState('none')
   console.log(disp)
 
   console.log(dayList)
@@ -17,7 +17,7 @@ function App() {
 
   const updateAll = (date, element) => {
     setDisp('none')
-    dispatch(update(date, element, newTask.current.value))
+    dispatch(update(date, element, newTask))
   }
   return (
     <div className="App">
@@ -38,7 +38,7 @@ function App() {
                           {element}
                           <button onClick={() => setDisp('')}>Edit</button>
                           <button onClick={()=>dispatch(removeTask(item.date, element))}>Delete</button>
-                          <input type='text' ref={newTask} style={{display: disp}}/>
+                          <input type='text' onChange={(e)=> setNewTask(e.target.value)} style={{display: disp}}/>
                           <button style={{display: disp}} onClick={()=>updateAll(item.date, element)}>Update</button>
                           </div>
                 })
