@@ -2,33 +2,57 @@ const initState = {
     days: []
 }
 
+{/* console.log(new Date(e.target.value) < new Date('2023-11-14'))}/>
+array.sort(function(a,b){
+// Turn your strings into dates, and then subtract them
+// to get a value that is either negative, positive, or zero.
+return new Date(b.date) - new Date(a.date);
+}); */}
+
 export const plannerReducer = (state = initState, action) => {
-    let tasksArr = [...state.days]
-    let indx = tasksArr.findIndex(item => item.date == action.date)
-    
+    let dayArr = [...state.days];
+
+    let curDay = dayArr.findIndex(item => item.date === action.date)
+
     switch(action.type) {
         case 'planner/add':
-            
-            if (indx === -1) {
-                tasksArr.push({id: tasksArr.length +1, date: action.date, tasks: [...tasks, {id: tasks.length +1, task: action.task}]})
+            if (curDay === -1) {
+                dayArr.push({date: action.date, tasks: [action.task]})
             } else {
-                tasksArr[indx].tasks.push(action.task)
+                let newObj = {...dayArr[curDay]}
+                console.log(newObj)
+                let newTasksList = [...newObj.tasks]
+                console.log(newTasksList)
+                newTasksList.push(action.task)
+                newObj = {...dayArr[curDay], tasks: newTasksList}
+                dayArr[curDay] = newObj
+                console.log(dayArr)
             }
-            newTodo.push({id: newTodo.length +1, date: action.date, status: action.status, text: action.payload})
-            return {...state, days: tasksArr}
+            return {...state, days: dayArr.sort(function(a,b){return new Date(a.date).getTime() - new Date(b.date).getTime()})}
 
          case 'planner/update':
-            tasksArr[indx].tasks[action.id] = action.task
-            return {...state, days: tasksArr}
+            let generalObj = {...dayArr[curDay]}
+            let newTasksList = [...generalObj.tasks]
+            let taskInd = newTasksList.findIndex(item => item === action.task)
+            newTasksList[taskInd] = action.newTask
+            let newObj = {...dayArr[curDay], tasks: newTasksList}
+            dayArr[curDay] = newObj
+            
+            return {...state, days: dayArr}
 
         case 'planner/deleteDay':
-            tasksArr.splice(indx, 1)
-            return {...state, days: tasksArr}
+            dayArr.splice(curDay, 1)
+            return {...state, days: dayArr}
             
         case 'planner/deleteTask':
-            let TaskIndex = tasksArr[indx].tasks.filter(elem => elem.id === action.id)
-            tasksArr[indx].tasks.splice(TaskIndex, 1)
-            return {...state, days: tasksArr}
+            let BigObj = {...dayArr[curDay]}
+            let BigTasksList = [...BigObj.tasks]
+            let Indx = BigTasksList.findIndex(item => item === action.task)
+            BigTasksList.splice(Indx,1)
+            let editObj = {...dayArr[curDay], tasks: BigTasksList}
+            dayArr[curDay] = editObj
+
+            return {...state, days: dayArr}
 
             default:
                 return {...state}

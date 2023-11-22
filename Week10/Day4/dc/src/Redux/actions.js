@@ -1,22 +1,31 @@
-export const add = (payload, status='Not Done') => {
+export const add = (date, task) => {
     return {
-        type: 'todo/add',
-        status,
-        payload,
+        type: 'planner/add',
+        date,
+        task,
     }
 }
 
-export const changeStatus = (status, id) => {
+export const update = (date, task, newTask) => {
     return {
-        type: 'todo/status',
-        status,
-        id
+        type: 'planner/update',
+        date,
+        task,
+        newTask
     }
 }
 
-export const remove = (id) => {
+export const removeDay = (date) => {
     return {
-        type: 'todo/remove',
-        id
+        type: 'planner/deleteDay',
+        date
+    }
+}
+
+export const removeTask = (date, task) => {
+    return {
+        type: 'planner/deleteTask',
+        date,
+        task
     }
 }
