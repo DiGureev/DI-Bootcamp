@@ -15,6 +15,7 @@ function todoReducer(state, action) {
 
 export function TodoList() {
     const [todos, dispatch] = useReducer(todoReducer, []);
+    
     const [todoText, setTodoText] = useState("");
     const [display, setDisplay] = useState("none")
   

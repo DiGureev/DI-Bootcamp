@@ -14,14 +14,14 @@ const Search = (props) => {
 
     const getKey = async() => {
         let q = qRef.current.value
+
         try {
            let data = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=R2NZjvFkgSK6h6GobXtvLK5hI2rbZ6Ag&q=${q}&language=en-us`)
+
            let key = data.data[0].Key
            setKey(key)
            setCity(data.data[0].AdministrativeArea.LocalizedName)
            getDay(key)
-           getForcast(key)
-           console.log(today)
            getImage()
         } catch (e) {
             console.log(e)
@@ -66,7 +66,8 @@ const Search = (props) => {
 
     return (
         <div className='container'>
-        <input className='input' type='text' ref={qRef}/><button onClick={getKey}>Search</button>
+        <input className='input' type='text' ref={qRef}/><button onClick={getKey}>Search</button><br/>
+        <button onClick={()=>getForcast(keyCity)}>Get a Forcast</button>
         
         <Forcast keyCity={keyCity} city={city} today={today} allForcast={allForcast} image={image}/>
         </div>

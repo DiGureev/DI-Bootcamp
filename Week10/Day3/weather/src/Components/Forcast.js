@@ -17,7 +17,7 @@ const Forcast = (props) => {
         setDisplay('block')
     }
 
-    if (allForcast.length > 0){
+    if (city.length > 0){
         return (
         <div className='card'>
                 <div className='header'>
