@@ -4,7 +4,7 @@ const initState = {
 
 export const todoReducer = (state = initState, action) => {
     const newTodo = [...state.listOftodos]
-    let index = action.id-1
+    let index = newTodo.findIndex(item => item.id == action.id) 
    
     console.log(action)
 
@@ -15,7 +15,8 @@ export const todoReducer = (state = initState, action) => {
 
         case 'todo/status':
             let newArr = [...newTodo]
-            newArr[index].status = action.status
+            let obj = {...newArr[index], status: action.status}
+            newArr[index] = obj
             return {...state, listOftodos: newArr}
             
         case 'todo/remove':
