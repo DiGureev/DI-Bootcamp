@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import { createSlice,nanoid, createAsyncThunk, createSelector} from "@reduxjs/toolkit";
 import axios from 'axios';
 
 const posts = [
